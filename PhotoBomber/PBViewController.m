@@ -71,7 +71,7 @@
 }
 
 
-#pragma mark - FilePicker API
+#pragma mark - FilePicker IBActions
 - (IBAction)pickerAction: (id) sender {
     
     
@@ -181,6 +181,13 @@
     
 }
 
+- (IBAction)reset:(id)sender {
+    self.image1.image = nil;
+    self.image2.image = nil;
+    self.image.image = nil;
+}
+
+
 #pragma mark - FPPickerControllerDelegate Methods
 
 - (void)FPPickerController:(FPPickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
@@ -225,6 +232,7 @@
 - (void)photoEditor:(AFPhotoEditorController *)editor finishedWithImage:(UIImage *)image
 {
    // [[self imageView] setImage:image];
+    self.image.image = image;
     [self dismissModalViewControllerAnimated:YES];
 }
 

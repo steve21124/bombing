@@ -20,6 +20,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    //Test Overlay
+    [self setupOverlay];
 }
 
 - (void)viewDidUnload
@@ -36,6 +39,26 @@
         return YES;
     }
 }
+
+
+- (void)setupOverlay{
+    UIImage *originalImage = [UIImage imageNamed:@"phil1.jpg"];
+    UIImage *noiseLayer = [UIImage imageNamed:@"Anxiety.png"];
+    
+    GPUImageOverlayBlendFilter *overlayBlendFilter = [[GPUImageOverlayBlendFilter alloc] init];
+    GPUImagePicture *pic1 = [[GPUImagePicture alloc] initWithImage:originalImage];
+    GPUImagePicture *pic2 = [[GPUImagePicture alloc] initWithImage:noiseLayer];
+    
+    [pic1 addTarget:overlayBlendFilter];
+    [pic1 processImage];
+    [pic2 addTarget:overlayBlendFilter];
+    [pic2 processImage];
+    
+    UIImage *blendedImage = [overlayBlendFilter imageFromCurrentlyProcessedOutputWithOrientation:originalImage.imageOrientation];
+    
+    
+}
+
 
 #pragma mark - FilePicker API
 // open files

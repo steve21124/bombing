@@ -8,6 +8,7 @@
 
 #import <FPPicker/FPPicker.h>
 #import <UIKit/UIKit.h>
+#import "GPUImage.h"
 
 @interface PBViewController : UIViewController<FPPickerDelegate>
 

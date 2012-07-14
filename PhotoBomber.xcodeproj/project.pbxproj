@@ -7,6 +7,164 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8011AFB915B2217F000C9D81 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8011AFB615B22179000C9D81 /* libGPUImage.a */; };
+		8011AFBD15B221AF000C9D81 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8011AFBC15B221AF000C9D81 /* AVFoundation.framework */; };
+		8011AFBF15B221B7000C9D81 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8011AFBE15B221B7000C9D81 /* CoreMedia.framework */; };
+		8011AFC115B221BF000C9D81 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8011AFC015B221BF000C9D81 /* CoreVideo.framework */; };
+		8011AFC315B221C7000C9D81 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8011AFC215B221C7000C9D81 /* OpenGLES.framework */; };
+		8011B05D15B221FF000C9D81 /* Activity Monitor.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFC515B221FF000C9D81 /* Activity Monitor.png */; };
+		8011B05E15B221FF000C9D81 /* Address Book.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFC615B221FF000C9D81 /* Address Book.png */; };
+		8011B05F15B221FF000C9D81 /* Anxiety.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFC715B221FF000C9D81 /* Anxiety.png */; };
+		8011B06015B221FF000C9D81 /* Aperture.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFC815B221FF000C9D81 /* Aperture.png */; };
+		8011B06115B221FF000C9D81 /* Apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFC915B221FF000C9D81 /* Apple.png */; };
+		8011B06215B221FF000C9D81 /* Applications.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFCA15B221FF000C9D81 /* Applications.png */; };
+		8011B06315B221FF000C9D81 /* Apps Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFCB15B221FF000C9D81 /* Apps Folder.png */; };
+		8011B06415B221FF000C9D81 /* Automator.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFCC15B221FF000C9D81 /* Automator.png */; };
+		8011B06515B221FF000C9D81 /* Backup Drive.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFCD15B221FF000C9D81 /* Backup Drive.png */; };
+		8011B06615B221FF000C9D81 /* BBEdit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFCE15B221FF000C9D81 /* BBEdit.png */; };
+		8011B06715B221FF000C9D81 /* Blood Splatter.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFCF15B221FF000C9D81 /* Blood Splatter.png */; };
+		8011B06815B221FF000C9D81 /* Bloody Chainsaw.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFD015B221FF000C9D81 /* Bloody Chainsaw.png */; };
+		8011B06915B221FF000C9D81 /* BootCamp Drive.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFD115B221FF000C9D81 /* BootCamp Drive.png */; };
+		8011B06A15B221FF000C9D81 /* Brain.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFD215B221FF000C9D81 /* Brain.png */; };
+		8011B06B15B221FF000C9D81 /* Burn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFD315B221FF000C9D81 /* Burn.png */; };
+		8011B06C15B221FF000C9D81 /* Burnable Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFD415B221FF000C9D81 /* Burnable Folder.png */; };
+		8011B06D15B221FF000C9D81 /* CandyBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFD515B221FF000C9D81 /* CandyBar.png */; };
+		8011B06E15B221FF000C9D81 /* Carved Pumpkin.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFD615B221FF000C9D81 /* Carved Pumpkin.png */; };
+		8011B06F15B221FF000C9D81 /* cd-r.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFD715B221FF000C9D81 /* cd-r.png */; };
+		8011B07015B221FF000C9D81 /* cd-rw.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFD815B221FF000C9D81 /* cd-rw.png */; };
+		8011B07115B221FF000C9D81 /* CD.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFD915B221FF000C9D81 /* CD.png */; };
+		8011B07215B221FF000C9D81 /* Chainsaw.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFDA15B221FF000C9D81 /* Chainsaw.png */; };
+		8011B07315B221FF000C9D81 /* Chat Alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFDB15B221FF000C9D81 /* Chat Alt.png */; };
+		8011B07415B221FF000C9D81 /* Chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFDC15B221FF000C9D81 /* Chat.png */; };
+		8011B07515B221FF000C9D81 /* Chupacabra.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFDD15B221FF000C9D81 /* Chupacabra.png */; };
+		8011B07615B221FF000C9D81 /* Classic Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFDE15B221FF000C9D81 /* Classic Folder.png */; };
+		8011B07715B221FF000C9D81 /* Coda.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFDF15B221FF000C9D81 /* Coda.png */; };
+		8011B07815B221FF000C9D81 /* Connect.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFE015B221FF000C9D81 /* Connect.png */; };
+		8011B07915B221FF000C9D81 /* Console.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFE115B221FF000C9D81 /* Console.png */; };
+		8011B07A15B221FF000C9D81 /* Customize.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFE215B221FF000C9D81 /* Customize.png */; };
+		8011B07B15B221FF000C9D81 /* Dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFE315B221FF000C9D81 /* Dashboard.png */; };
+		8011B07C15B221FF000C9D81 /* Delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFE415B221FF000C9D81 /* Delete.png */; };
+		8011B07D15B221FF000C9D81 /* Desktop.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFE515B221FF000C9D81 /* Desktop.png */; };
+		8011B07E15B221FF000C9D81 /* Dev Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFE615B221FF000C9D81 /* Dev Folder.png */; };
+		8011B07F15B221FF000C9D81 /* Dictionary.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFE715B221FF000C9D81 /* Dictionary.png */; };
+		8011B08015B221FF000C9D81 /* Dinosaur.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFE815B221FF000C9D81 /* Dinosaur.png */; };
+		8011B08115B221FF000C9D81 /* Disconnected.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFE915B221FF000C9D81 /* Disconnected.png */; };
+		8011B08215B221FF000C9D81 /* Docs Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFEA15B221FF000C9D81 /* Docs Folder.png */; };
+		8011B08315B221FF000C9D81 /* Document.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFEB15B221FF000C9D81 /* Document.png */; };
+		8011B08415B221FF000C9D81 /* Documents.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFEC15B221FF000C9D81 /* Documents.png */; };
+		8011B08515B221FF000C9D81 /* Downloads Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFED15B221FF000C9D81 /* Downloads Folder.png */; };
+		8011B08615B221FF000C9D81 /* Downloads.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFEE15B221FF000C9D81 /* Downloads.png */; };
+		8011B08715B221FF000C9D81 /* Drop Badge.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFEF15B221FF000C9D81 /* Drop Badge.png */; };
+		8011B08815B221FF000C9D81 /* DVD Player.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFF015B221FF000C9D81 /* DVD Player.png */; };
+		8011B08915B221FF000C9D81 /* dvd+r.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFF115B221FF000C9D81 /* dvd+r.png */; };
+		8011B08A15B221FF000C9D81 /* dvd+rw.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFF215B221FF000C9D81 /* dvd+rw.png */; };
+		8011B08B15B221FF000C9D81 /* dvd-r.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFF315B221FF000C9D81 /* dvd-r.png */; };
+		8011B08C15B221FF000C9D81 /* dvd-ram.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFF415B221FF000C9D81 /* dvd-ram.png */; };
+		8011B08D15B221FF000C9D81 /* dvd-rw.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFF515B221FF000C9D81 /* dvd-rw.png */; };
+		8011B08E15B221FF000C9D81 /* DVD.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFF615B221FF000C9D81 /* DVD.png */; };
+		8011B08F15B221FF000C9D81 /* Eject.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFF715B221FF000C9D81 /* Eject.png */; };
+		8011B09015B221FF000C9D81 /* External Drive.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFF815B221FF000C9D81 /* External Drive.png */; };
+		8011B09115B221FF000C9D81 /* Extra Drive.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFF915B221FF000C9D81 /* Extra Drive.png */; };
+		8011B09215B221FF000C9D81 /* Eyeball.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFFA15B221FF000C9D81 /* Eyeball.png */; };
+		8011B09315B221FF000C9D81 /* Favorites.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFFB15B221FF000C9D81 /* Favorites.png */; };
+		8011B09415B221FF000C9D81 /* Find.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFFC15B221FF000C9D81 /* Find.png */; };
+		8011B09515B221FF000C9D81 /* Finder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFFD15B221FF000C9D81 /* Finder.png */; };
+		8011B09615B221FF000C9D81 /* Firefox alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFFE15B221FF000C9D81 /* Firefox alt.png */; };
+		8011B09715B221FF000C9D81 /* Firefox.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011AFFF15B221FF000C9D81 /* Firefox.png */; };
+		8011B09815B221FF000C9D81 /* Firewire Drive.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B00015B221FF000C9D81 /* Firewire Drive.png */; };
+		8011B09915B221FF000C9D81 /* Flash.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B00115B221FF000C9D81 /* Flash.png */; };
+		8011B09A15B221FF000C9D81 /* Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B00215B221FF000C9D81 /* Folder.png */; };
+		8011B09B15B221FF000C9D81 /* Frenzic.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B00315B221FF000C9D81 /* Frenzic.png */; };
+		8011B09C15B221FF000C9D81 /* Games.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B00415B221FF000C9D81 /* Games.png */; };
+		8011B09D15B221FF000C9D81 /* Garageband.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B00515B221FF000C9D81 /* Garageband.png */; };
+		8011B09E15B221FF000C9D81 /* Get Info.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B00615B221FF000C9D81 /* Get Info.png */; };
+		8011B09F15B221FF000C9D81 /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B00715B221FF000C9D81 /* Home.png */; };
+		8011B0A015B221FF000C9D81 /* iCal Empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B00815B221FF000C9D81 /* iCal Empty.png */; };
+		8011B0A115B221FF000C9D81 /* iCal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B00915B221FF000C9D81 /* iCal.png */; };
+		8011B0A215B221FF000C9D81 /* Iconfactory.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B00A15B221FF000C9D81 /* Iconfactory.png */; };
+		8011B0A315B221FF000C9D81 /* iDisk Public.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B00B15B221FF000C9D81 /* iDisk Public.png */; };
+		8011B0A415B221FF000C9D81 /* iDisk.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B00C15B221FF000C9D81 /* iDisk.png */; };
+		8011B0A515B221FF000C9D81 /* Image.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B00D15B221FF000C9D81 /* Image.png */; };
+		8011B0A615B221FF000C9D81 /* Internal Drive.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B00E15B221FF000C9D81 /* Internal Drive.png */; };
+		8011B0A715B221FF000C9D81 /* iPod Black.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B00F15B221FF000C9D81 /* iPod Black.png */; };
+		8011B0A815B221FF000C9D81 /* iPod.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B01015B221FF000C9D81 /* iPod.png */; };
+		8011B0A915B221FF000C9D81 /* iPulse.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B01115B221FF000C9D81 /* iPulse.png */; };
+		8011B0AA15B221FF000C9D81 /* iTunes.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B01215B221FF000C9D81 /* iTunes.png */; };
+		8011B0AB15B221FF000C9D81 /* Keynote.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B01315B221FF000C9D81 /* Keynote.png */; };
+		8011B0AC15B221FF000C9D81 /* Library Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B01415B221FF000C9D81 /* Library Folder.png */; };
+		8011B0AD15B221FF000C9D81 /* Mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B01515B221FF000C9D81 /* Mail.png */; };
+		8011B0AE15B221FF000C9D81 /* Media Drive.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B01615B221FF000C9D81 /* Media Drive.png */; };
+		8011B0AF15B221FF000C9D81 /* Movie Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B01715B221FF000C9D81 /* Movie Folder.png */; };
+		8011B0B015B221FF000C9D81 /* Movie.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B01815B221FF000C9D81 /* Movie.png */; };
+		8011B0B115B221FF000C9D81 /* Music Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B01915B221FF000C9D81 /* Music Folder.png */; };
+		8011B0B215B221FF000C9D81 /* Music.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B01A15B221FF000C9D81 /* Music.png */; };
+		8011B0B315B221FF000C9D81 /* Nano Black.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B01B15B221FF000C9D81 /* Nano Black.png */; };
+		8011B0B415B221FF000C9D81 /* Nano Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B01C15B221FF000C9D81 /* Nano Blue.png */; };
+		8011B0B515B221FF000C9D81 /* Nano Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B01D15B221FF000C9D81 /* Nano Green.png */; };
+		8011B0B615B221FF000C9D81 /* Nano Pink.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B01E15B221FF000C9D81 /* Nano Pink.png */; };
+		8011B0B715B221FF000C9D81 /* Nano Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B01F15B221FF000C9D81 /* Nano Red.png */; };
+		8011B0B815B221FF000C9D81 /* Nano silver.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B02015B221FF000C9D81 /* Nano silver.png */; };
+		8011B0B915B221FF000C9D81 /* Network Drive.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B02115B221FF000C9D81 /* Network Drive.png */; };
+		8011B0BA15B221FF000C9D81 /* Network.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B02215B221FF000C9D81 /* Network.png */; };
+		8011B0BB15B221FF000C9D81 /* New Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B02315B221FF000C9D81 /* New Folder.png */; };
+		8011B0BC15B221FF000C9D81 /* Numbers.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B02415B221FF000C9D81 /* Numbers.png */; };
+		8011B0BD15B221FF000C9D81 /* Package.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B02515B221FF000C9D81 /* Package.png */; };
+		8011B0BE15B221FF000C9D81 /* Pages.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B02615B221FF000C9D81 /* Pages.png */; };
+		8011B0BF15B221FF000C9D81 /* Paint.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B02715B221FF000C9D81 /* Paint.png */; };
+		8011B0C015B221FF000C9D81 /* Pen.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B02815B221FF000C9D81 /* Pen.png */; };
+		8011B0C115B221FF000C9D81 /* Photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B02915B221FF000C9D81 /* Photo.png */; };
+		8011B0C215B221FF000C9D81 /* Photoshop.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B02A15B221FF000C9D81 /* Photoshop.png */; };
+		8011B0C315B221FF000C9D81 /* Pictures Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B02B15B221FF000C9D81 /* Pictures Folder.png */; };
+		8011B0C415B221FF000C9D81 /* Pirate.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B02C15B221FF000C9D81 /* Pirate.png */; };
+		8011B0C515B221FF000C9D81 /* Pixadex.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B02D15B221FF000C9D81 /* Pixadex.png */; };
+		8011B0C615B221FF000C9D81 /* Poison.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B02E15B221FF000C9D81 /* Poison.png */; };
+		8011B0C715B221FF000C9D81 /* Preview Alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B02F15B221FF000C9D81 /* Preview Alt.png */; };
+		8011B0C815B221FF000C9D81 /* Preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B03015B221FF000C9D81 /* Preview.png */; };
+		8011B0C915B221FF000C9D81 /* Private Badge.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B03115B221FF000C9D81 /* Private Badge.png */; };
+		8011B0CA15B221FF000C9D81 /* Private Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B03215B221FF000C9D81 /* Private Folder.png */; };
+		8011B0CB15B221FF000C9D81 /* Public Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B03315B221FF000C9D81 /* Public Folder.png */; };
+		8011B0CC15B221FF000C9D81 /* Public.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B03415B221FF000C9D81 /* Public.png */; };
+		8011B0CD15B221FF000C9D81 /* Pumpkin.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B03515B221FF000C9D81 /* Pumpkin.png */; };
+		8011B0CE15B221FF000C9D81 /* Quicktime.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B03615B221FF000C9D81 /* Quicktime.png */; };
+		8011B0CF15B221FF000C9D81 /* Removable Drive.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B03715B221FF000C9D81 /* Removable Drive.png */; };
+		8011B0D015B221FF000C9D81 /* RSS Reader.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B03815B221FF000C9D81 /* RSS Reader.png */; };
+		8011B0D115B221FF000C9D81 /* Safari.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B03915B221FF000C9D81 /* Safari.png */; };
+		8011B0D215B221FF000C9D81 /* Sea Monster.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B03A15B221FF000C9D81 /* Sea Monster.png */; };
+		8011B0D315B221FF000C9D81 /* Shuffle g2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B03B15B221FF000C9D81 /* Shuffle g2.png */; };
+		8011B0D415B221FF000C9D81 /* Shuffle Gen1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B03C15B221FF000C9D81 /* Shuffle Gen1.png */; };
+		8011B0D515B221FF000C9D81 /* Sites Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B03D15B221FF000C9D81 /* Sites Folder.png */; };
+		8011B0D615B221FF000C9D81 /* Skull blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B03E15B221FF000C9D81 /* Skull blue.png */; };
+		8011B0D715B221FF000C9D81 /* Skull bw.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B03F15B221FF000C9D81 /* Skull bw.png */; };
+		8011B0D815B221FF000C9D81 /* Skull green.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B04015B221FF000C9D81 /* Skull green.png */; };
+		8011B0D915B221FF000C9D81 /* Skull magenta.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B04115B221FF000C9D81 /* Skull magenta.png */; };
+		8011B0DA15B221FF000C9D81 /* Skull orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B04215B221FF000C9D81 /* Skull orange.png */; };
+		8011B0DB15B221FF000C9D81 /* Skull.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B04315B221FF000C9D81 /* Skull.png */; };
+		8011B0DC15B221FF000C9D81 /* Skype.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B04415B221FF000C9D81 /* Skype.png */; };
+		8011B0DD15B221FF000C9D81 /* Smart Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B04515B221FF000C9D81 /* Smart Folder.png */; };
+		8011B0DE15B221FF000C9D81 /* Soul.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B04615B221FF000C9D81 /* Soul.png */; };
+		8011B0DF15B221FF000C9D81 /* Squid Attack.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B04715B221FF000C9D81 /* Squid Attack.png */; };
+		8011B0E015B221FF000C9D81 /* Stickies.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B04815B221FF000C9D81 /* Stickies.png */; };
+		8011B0E115B221FF000C9D81 /* System Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B04915B221FF000C9D81 /* System Folder.png */; };
+		8011B0E215B221FF000C9D81 /* System Preferences.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B04A15B221FF000C9D81 /* System Preferences.png */; };
+		8011B0E315B221FF000C9D81 /* Terminal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B04B15B221FF000C9D81 /* Terminal.png */; };
+		8011B0E415B221FF000C9D81 /* Text Edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B04C15B221FF000C9D81 /* Text Edit.png */; };
+		8011B0E515B221FF000C9D81 /* Time Machine.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B04D15B221FF000C9D81 /* Time Machine.png */; };
+		8011B0E615B221FF000C9D81 /* Toast.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B04E15B221FF000C9D81 /* Toast.png */; };
+		8011B0E715B221FF000C9D81 /* Torrent.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B04F15B221FF000C9D81 /* Torrent.png */; };
+		8011B0E815B221FF000C9D81 /* Transmit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B05015B221FF000C9D81 /* Transmit.png */; };
+		8011B0E915B221FF000C9D81 /* Trash Empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B05115B221FF000C9D81 /* Trash Empty.png */; };
+		8011B0EA15B221FF000C9D81 /* Trash Full.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B05215B221FF000C9D81 /* Trash Full.png */; };
+		8011B0EB15B221FF000C9D81 /* Twitterrific.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B05315B221FF000C9D81 /* Twitterrific.png */; };
+		8011B0EC15B221FF000C9D81 /* USB Drive.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B05415B221FF000C9D81 /* USB Drive.png */; };
+		8011B0ED15B221FF000C9D81 /* Users Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B05515B221FF000C9D81 /* Users Folder.png */; };
+		8011B0EE15B221FF000C9D81 /* Utilities Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B05615B221FF000C9D81 /* Utilities Folder.png */; };
+		8011B0EF15B221FF000C9D81 /* Vampire.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B05715B221FF000C9D81 /* Vampire.png */; };
+		8011B0F015B221FF000C9D81 /* VLC.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B05815B221FF000C9D81 /* VLC.png */; };
+		8011B0F115B221FF000C9D81 /* Witch.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B05915B221FF000C9D81 /* Witch.png */; };
+		8011B0F215B221FF000C9D81 /* xScope.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B05A15B221FF000C9D81 /* xScope.png */; };
+		8011B0F315B221FF000C9D81 /* Yojimbo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B05B15B221FF000C9D81 /* Yojimbo.png */; };
+		8011B0F415B221FF000C9D81 /* Zombie.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011B05C15B221FF000C9D81 /* Zombie.png */; };
+		8011B0F715B22345000C9D81 /* phil1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8011B0F615B22345000C9D81 /* phil1.jpg */; };
 		FC0CBB5E15B206AD009BDA73 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBB5D15B206AD009BDA73 /* UIKit.framework */; };
 		FC0CBB6015B206AD009BDA73 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBB5F15B206AD009BDA73 /* Foundation.framework */; };
 		FC0CBB6215B206AD009BDA73 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBB6115B206AD009BDA73 /* CoreGraphics.framework */; };
@@ -32,6 +190,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8011AFB515B22179000C9D81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8011AFAC15B22179000C9D81 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
+			remoteInfo = GPUImage;
+		};
+		8011AFB715B22179000C9D81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8011AFAC15B22179000C9D81 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A34414DDB1EC00852800;
+			remoteInfo = GPUImageTests;
+		};
+		8011AFBA15B22186000C9D81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8011AFAC15B22179000C9D81 /* GPUImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCF1A33314DDB1EC00852800;
+			remoteInfo = GPUImage;
+		};
 		FC0CBB8215B206AD009BDA73 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FC0CBB5015B206AD009BDA73 /* Project object */;
@@ -42,6 +221,164 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8011AFAC15B22179000C9D81 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = GPUImage.framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
+		8011AFBC15B221AF000C9D81 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8011AFBE15B221B7000C9D81 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		8011AFC015B221BF000C9D81 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		8011AFC215B221C7000C9D81 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		8011AFC515B221FF000C9D81 /* Activity Monitor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Activity Monitor.png"; sourceTree = "<group>"; };
+		8011AFC615B221FF000C9D81 /* Address Book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Address Book.png"; sourceTree = "<group>"; };
+		8011AFC715B221FF000C9D81 /* Anxiety.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Anxiety.png; sourceTree = "<group>"; };
+		8011AFC815B221FF000C9D81 /* Aperture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Aperture.png; sourceTree = "<group>"; };
+		8011AFC915B221FF000C9D81 /* Apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Apple.png; sourceTree = "<group>"; };
+		8011AFCA15B221FF000C9D81 /* Applications.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Applications.png; sourceTree = "<group>"; };
+		8011AFCB15B221FF000C9D81 /* Apps Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Apps Folder.png"; sourceTree = "<group>"; };
+		8011AFCC15B221FF000C9D81 /* Automator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Automator.png; sourceTree = "<group>"; };
+		8011AFCD15B221FF000C9D81 /* Backup Drive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Backup Drive.png"; sourceTree = "<group>"; };
+		8011AFCE15B221FF000C9D81 /* BBEdit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BBEdit.png; sourceTree = "<group>"; };
+		8011AFCF15B221FF000C9D81 /* Blood Splatter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blood Splatter.png"; sourceTree = "<group>"; };
+		8011AFD015B221FF000C9D81 /* Bloody Chainsaw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bloody Chainsaw.png"; sourceTree = "<group>"; };
+		8011AFD115B221FF000C9D81 /* BootCamp Drive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BootCamp Drive.png"; sourceTree = "<group>"; };
+		8011AFD215B221FF000C9D81 /* Brain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Brain.png; sourceTree = "<group>"; };
+		8011AFD315B221FF000C9D81 /* Burn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Burn.png; sourceTree = "<group>"; };
+		8011AFD415B221FF000C9D81 /* Burnable Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Burnable Folder.png"; sourceTree = "<group>"; };
+		8011AFD515B221FF000C9D81 /* CandyBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CandyBar.png; sourceTree = "<group>"; };
+		8011AFD615B221FF000C9D81 /* Carved Pumpkin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Carved Pumpkin.png"; sourceTree = "<group>"; };
+		8011AFD715B221FF000C9D81 /* cd-r.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cd-r.png"; sourceTree = "<group>"; };
+		8011AFD815B221FF000C9D81 /* cd-rw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cd-rw.png"; sourceTree = "<group>"; };
+		8011AFD915B221FF000C9D81 /* CD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CD.png; sourceTree = "<group>"; };
+		8011AFDA15B221FF000C9D81 /* Chainsaw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chainsaw.png; sourceTree = "<group>"; };
+		8011AFDB15B221FF000C9D81 /* Chat Alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chat Alt.png"; sourceTree = "<group>"; };
+		8011AFDC15B221FF000C9D81 /* Chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chat.png; sourceTree = "<group>"; };
+		8011AFDD15B221FF000C9D81 /* Chupacabra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chupacabra.png; sourceTree = "<group>"; };
+		8011AFDE15B221FF000C9D81 /* Classic Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Classic Folder.png"; sourceTree = "<group>"; };
+		8011AFDF15B221FF000C9D81 /* Coda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Coda.png; sourceTree = "<group>"; };
+		8011AFE015B221FF000C9D81 /* Connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Connect.png; sourceTree = "<group>"; };
+		8011AFE115B221FF000C9D81 /* Console.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Console.png; sourceTree = "<group>"; };
+		8011AFE215B221FF000C9D81 /* Customize.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Customize.png; sourceTree = "<group>"; };
+		8011AFE315B221FF000C9D81 /* Dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dashboard.png; sourceTree = "<group>"; };
+		8011AFE415B221FF000C9D81 /* Delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Delete.png; sourceTree = "<group>"; };
+		8011AFE515B221FF000C9D81 /* Desktop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Desktop.png; sourceTree = "<group>"; };
+		8011AFE615B221FF000C9D81 /* Dev Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dev Folder.png"; sourceTree = "<group>"; };
+		8011AFE715B221FF000C9D81 /* Dictionary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dictionary.png; sourceTree = "<group>"; };
+		8011AFE815B221FF000C9D81 /* Dinosaur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dinosaur.png; sourceTree = "<group>"; };
+		8011AFE915B221FF000C9D81 /* Disconnected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Disconnected.png; sourceTree = "<group>"; };
+		8011AFEA15B221FF000C9D81 /* Docs Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Docs Folder.png"; sourceTree = "<group>"; };
+		8011AFEB15B221FF000C9D81 /* Document.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Document.png; sourceTree = "<group>"; };
+		8011AFEC15B221FF000C9D81 /* Documents.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Documents.png; sourceTree = "<group>"; };
+		8011AFED15B221FF000C9D81 /* Downloads Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Downloads Folder.png"; sourceTree = "<group>"; };
+		8011AFEE15B221FF000C9D81 /* Downloads.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Downloads.png; sourceTree = "<group>"; };
+		8011AFEF15B221FF000C9D81 /* Drop Badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Drop Badge.png"; sourceTree = "<group>"; };
+		8011AFF015B221FF000C9D81 /* DVD Player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DVD Player.png"; sourceTree = "<group>"; };
+		8011AFF115B221FF000C9D81 /* dvd+r.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dvd+r.png"; sourceTree = "<group>"; };
+		8011AFF215B221FF000C9D81 /* dvd+rw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dvd+rw.png"; sourceTree = "<group>"; };
+		8011AFF315B221FF000C9D81 /* dvd-r.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dvd-r.png"; sourceTree = "<group>"; };
+		8011AFF415B221FF000C9D81 /* dvd-ram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dvd-ram.png"; sourceTree = "<group>"; };
+		8011AFF515B221FF000C9D81 /* dvd-rw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dvd-rw.png"; sourceTree = "<group>"; };
+		8011AFF615B221FF000C9D81 /* DVD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DVD.png; sourceTree = "<group>"; };
+		8011AFF715B221FF000C9D81 /* Eject.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eject.png; sourceTree = "<group>"; };
+		8011AFF815B221FF000C9D81 /* External Drive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "External Drive.png"; sourceTree = "<group>"; };
+		8011AFF915B221FF000C9D81 /* Extra Drive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Extra Drive.png"; sourceTree = "<group>"; };
+		8011AFFA15B221FF000C9D81 /* Eyeball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eyeball.png; sourceTree = "<group>"; };
+		8011AFFB15B221FF000C9D81 /* Favorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Favorites.png; sourceTree = "<group>"; };
+		8011AFFC15B221FF000C9D81 /* Find.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Find.png; sourceTree = "<group>"; };
+		8011AFFD15B221FF000C9D81 /* Finder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Finder.png; sourceTree = "<group>"; };
+		8011AFFE15B221FF000C9D81 /* Firefox alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Firefox alt.png"; sourceTree = "<group>"; };
+		8011AFFF15B221FF000C9D81 /* Firefox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Firefox.png; sourceTree = "<group>"; };
+		8011B00015B221FF000C9D81 /* Firewire Drive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Firewire Drive.png"; sourceTree = "<group>"; };
+		8011B00115B221FF000C9D81 /* Flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flash.png; sourceTree = "<group>"; };
+		8011B00215B221FF000C9D81 /* Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Folder.png; sourceTree = "<group>"; };
+		8011B00315B221FF000C9D81 /* Frenzic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frenzic.png; sourceTree = "<group>"; };
+		8011B00415B221FF000C9D81 /* Games.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Games.png; sourceTree = "<group>"; };
+		8011B00515B221FF000C9D81 /* Garageband.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Garageband.png; sourceTree = "<group>"; };
+		8011B00615B221FF000C9D81 /* Get Info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Get Info.png"; sourceTree = "<group>"; };
+		8011B00715B221FF000C9D81 /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
+		8011B00815B221FF000C9D81 /* iCal Empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iCal Empty.png"; sourceTree = "<group>"; };
+		8011B00915B221FF000C9D81 /* iCal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iCal.png; sourceTree = "<group>"; };
+		8011B00A15B221FF000C9D81 /* Iconfactory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Iconfactory.png; sourceTree = "<group>"; };
+		8011B00B15B221FF000C9D81 /* iDisk Public.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iDisk Public.png"; sourceTree = "<group>"; };
+		8011B00C15B221FF000C9D81 /* iDisk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iDisk.png; sourceTree = "<group>"; };
+		8011B00D15B221FF000C9D81 /* Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image.png; sourceTree = "<group>"; };
+		8011B00E15B221FF000C9D81 /* Internal Drive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Internal Drive.png"; sourceTree = "<group>"; };
+		8011B00F15B221FF000C9D81 /* iPod Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPod Black.png"; sourceTree = "<group>"; };
+		8011B01015B221FF000C9D81 /* iPod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPod.png; sourceTree = "<group>"; };
+		8011B01115B221FF000C9D81 /* iPulse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPulse.png; sourceTree = "<group>"; };
+		8011B01215B221FF000C9D81 /* iTunes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunes.png; sourceTree = "<group>"; };
+		8011B01315B221FF000C9D81 /* Keynote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Keynote.png; sourceTree = "<group>"; };
+		8011B01415B221FF000C9D81 /* Library Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Library Folder.png"; sourceTree = "<group>"; };
+		8011B01515B221FF000C9D81 /* Mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mail.png; sourceTree = "<group>"; };
+		8011B01615B221FF000C9D81 /* Media Drive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Media Drive.png"; sourceTree = "<group>"; };
+		8011B01715B221FF000C9D81 /* Movie Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Movie Folder.png"; sourceTree = "<group>"; };
+		8011B01815B221FF000C9D81 /* Movie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Movie.png; sourceTree = "<group>"; };
+		8011B01915B221FF000C9D81 /* Music Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Music Folder.png"; sourceTree = "<group>"; };
+		8011B01A15B221FF000C9D81 /* Music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Music.png; sourceTree = "<group>"; };
+		8011B01B15B221FF000C9D81 /* Nano Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nano Black.png"; sourceTree = "<group>"; };
+		8011B01C15B221FF000C9D81 /* Nano Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nano Blue.png"; sourceTree = "<group>"; };
+		8011B01D15B221FF000C9D81 /* Nano Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nano Green.png"; sourceTree = "<group>"; };
+		8011B01E15B221FF000C9D81 /* Nano Pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nano Pink.png"; sourceTree = "<group>"; };
+		8011B01F15B221FF000C9D81 /* Nano Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nano Red.png"; sourceTree = "<group>"; };
+		8011B02015B221FF000C9D81 /* Nano silver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nano silver.png"; sourceTree = "<group>"; };
+		8011B02115B221FF000C9D81 /* Network Drive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Network Drive.png"; sourceTree = "<group>"; };
+		8011B02215B221FF000C9D81 /* Network.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Network.png; sourceTree = "<group>"; };
+		8011B02315B221FF000C9D81 /* New Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New Folder.png"; sourceTree = "<group>"; };
+		8011B02415B221FF000C9D81 /* Numbers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Numbers.png; sourceTree = "<group>"; };
+		8011B02515B221FF000C9D81 /* Package.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Package.png; sourceTree = "<group>"; };
+		8011B02615B221FF000C9D81 /* Pages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pages.png; sourceTree = "<group>"; };
+		8011B02715B221FF000C9D81 /* Paint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Paint.png; sourceTree = "<group>"; };
+		8011B02815B221FF000C9D81 /* Pen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pen.png; sourceTree = "<group>"; };
+		8011B02915B221FF000C9D81 /* Photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Photo.png; sourceTree = "<group>"; };
+		8011B02A15B221FF000C9D81 /* Photoshop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Photoshop.png; sourceTree = "<group>"; };
+		8011B02B15B221FF000C9D81 /* Pictures Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pictures Folder.png"; sourceTree = "<group>"; };
+		8011B02C15B221FF000C9D81 /* Pirate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pirate.png; sourceTree = "<group>"; };
+		8011B02D15B221FF000C9D81 /* Pixadex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pixadex.png; sourceTree = "<group>"; };
+		8011B02E15B221FF000C9D81 /* Poison.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Poison.png; sourceTree = "<group>"; };
+		8011B02F15B221FF000C9D81 /* Preview Alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Preview Alt.png"; sourceTree = "<group>"; };
+		8011B03015B221FF000C9D81 /* Preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Preview.png; sourceTree = "<group>"; };
+		8011B03115B221FF000C9D81 /* Private Badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Private Badge.png"; sourceTree = "<group>"; };
+		8011B03215B221FF000C9D81 /* Private Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Private Folder.png"; sourceTree = "<group>"; };
+		8011B03315B221FF000C9D81 /* Public Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Public Folder.png"; sourceTree = "<group>"; };
+		8011B03415B221FF000C9D81 /* Public.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Public.png; sourceTree = "<group>"; };
+		8011B03515B221FF000C9D81 /* Pumpkin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pumpkin.png; sourceTree = "<group>"; };
+		8011B03615B221FF000C9D81 /* Quicktime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Quicktime.png; sourceTree = "<group>"; };
+		8011B03715B221FF000C9D81 /* Removable Drive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Removable Drive.png"; sourceTree = "<group>"; };
+		8011B03815B221FF000C9D81 /* RSS Reader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RSS Reader.png"; sourceTree = "<group>"; };
+		8011B03915B221FF000C9D81 /* Safari.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Safari.png; sourceTree = "<group>"; };
+		8011B03A15B221FF000C9D81 /* Sea Monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sea Monster.png"; sourceTree = "<group>"; };
+		8011B03B15B221FF000C9D81 /* Shuffle g2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shuffle g2.png"; sourceTree = "<group>"; };
+		8011B03C15B221FF000C9D81 /* Shuffle Gen1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shuffle Gen1.png"; sourceTree = "<group>"; };
+		8011B03D15B221FF000C9D81 /* Sites Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sites Folder.png"; sourceTree = "<group>"; };
+		8011B03E15B221FF000C9D81 /* Skull blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Skull blue.png"; sourceTree = "<group>"; };
+		8011B03F15B221FF000C9D81 /* Skull bw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Skull bw.png"; sourceTree = "<group>"; };
+		8011B04015B221FF000C9D81 /* Skull green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Skull green.png"; sourceTree = "<group>"; };
+		8011B04115B221FF000C9D81 /* Skull magenta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Skull magenta.png"; sourceTree = "<group>"; };
+		8011B04215B221FF000C9D81 /* Skull orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Skull orange.png"; sourceTree = "<group>"; };
+		8011B04315B221FF000C9D81 /* Skull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Skull.png; sourceTree = "<group>"; };
+		8011B04415B221FF000C9D81 /* Skype.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Skype.png; sourceTree = "<group>"; };
+		8011B04515B221FF000C9D81 /* Smart Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Smart Folder.png"; sourceTree = "<group>"; };
+		8011B04615B221FF000C9D81 /* Soul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Soul.png; sourceTree = "<group>"; };
+		8011B04715B221FF000C9D81 /* Squid Attack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Squid Attack.png"; sourceTree = "<group>"; };
+		8011B04815B221FF000C9D81 /* Stickies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stickies.png; sourceTree = "<group>"; };
+		8011B04915B221FF000C9D81 /* System Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "System Folder.png"; sourceTree = "<group>"; };
+		8011B04A15B221FF000C9D81 /* System Preferences.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "System Preferences.png"; sourceTree = "<group>"; };
+		8011B04B15B221FF000C9D81 /* Terminal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Terminal.png; sourceTree = "<group>"; };
+		8011B04C15B221FF000C9D81 /* Text Edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Text Edit.png"; sourceTree = "<group>"; };
+		8011B04D15B221FF000C9D81 /* Time Machine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Time Machine.png"; sourceTree = "<group>"; };
+		8011B04E15B221FF000C9D81 /* Toast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Toast.png; sourceTree = "<group>"; };
+		8011B04F15B221FF000C9D81 /* Torrent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Torrent.png; sourceTree = "<group>"; };
+		8011B05015B221FF000C9D81 /* Transmit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Transmit.png; sourceTree = "<group>"; };
+		8011B05115B221FF000C9D81 /* Trash Empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Trash Empty.png"; sourceTree = "<group>"; };
+		8011B05215B221FF000C9D81 /* Trash Full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Trash Full.png"; sourceTree = "<group>"; };
+		8011B05315B221FF000C9D81 /* Twitterrific.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitterrific.png; sourceTree = "<group>"; };
+		8011B05415B221FF000C9D81 /* USB Drive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "USB Drive.png"; sourceTree = "<group>"; };
+		8011B05515B221FF000C9D81 /* Users Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Users Folder.png"; sourceTree = "<group>"; };
+		8011B05615B221FF000C9D81 /* Utilities Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Utilities Folder.png"; sourceTree = "<group>"; };
+		8011B05715B221FF000C9D81 /* Vampire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Vampire.png; sourceTree = "<group>"; };
+		8011B05815B221FF000C9D81 /* VLC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VLC.png; sourceTree = "<group>"; };
+		8011B05915B221FF000C9D81 /* Witch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Witch.png; sourceTree = "<group>"; };
+		8011B05A15B221FF000C9D81 /* xScope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xScope.png; sourceTree = "<group>"; };
+		8011B05B15B221FF000C9D81 /* Yojimbo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yojimbo.png; sourceTree = "<group>"; };
+		8011B05C15B221FF000C9D81 /* Zombie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zombie.png; sourceTree = "<group>"; };
+		8011B0F615B22345000C9D81 /* phil1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = phil1.jpg; sourceTree = "<group>"; };
 		FC0CBB5915B206AD009BDA73 /* PhotoBomber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoBomber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC0CBB5D15B206AD009BDA73 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC0CBB5F15B206AD009BDA73 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -75,6 +412,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8011AFC315B221C7000C9D81 /* OpenGLES.framework in Frameworks */,
+				8011AFC115B221BF000C9D81 /* CoreVideo.framework in Frameworks */,
+				8011AFBF15B221B7000C9D81 /* CoreMedia.framework in Frameworks */,
+				8011AFBD15B221AF000C9D81 /* AVFoundation.framework in Frameworks */,
+				8011AFB915B2217F000C9D81 /* libGPUImage.a in Frameworks */,
 				FC0CBBA215B21AD3009BDA73 /* MobileCoreServices.framework in Frameworks */,
 				FC0CBBA015B21A6B009BDA73 /* CoreFoundation.framework in Frameworks */,
 				FC0CBB9E15B21A5F009BDA73 /* QuartzCore.framework in Frameworks */,
@@ -100,9 +442,189 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8011AFAD15B22179000C9D81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8011AFB615B22179000C9D81 /* libGPUImage.a */,
+				8011AFB815B22179000C9D81 /* GPUImageTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8011AFC415B221FF000C9D81 /* Stickers */ = {
+			isa = PBXGroup;
+			children = (
+				8011AFC515B221FF000C9D81 /* Activity Monitor.png */,
+				8011AFC615B221FF000C9D81 /* Address Book.png */,
+				8011AFC715B221FF000C9D81 /* Anxiety.png */,
+				8011AFC815B221FF000C9D81 /* Aperture.png */,
+				8011AFC915B221FF000C9D81 /* Apple.png */,
+				8011AFCA15B221FF000C9D81 /* Applications.png */,
+				8011AFCB15B221FF000C9D81 /* Apps Folder.png */,
+				8011AFCC15B221FF000C9D81 /* Automator.png */,
+				8011AFCD15B221FF000C9D81 /* Backup Drive.png */,
+				8011AFCE15B221FF000C9D81 /* BBEdit.png */,
+				8011AFCF15B221FF000C9D81 /* Blood Splatter.png */,
+				8011AFD015B221FF000C9D81 /* Bloody Chainsaw.png */,
+				8011AFD115B221FF000C9D81 /* BootCamp Drive.png */,
+				8011AFD215B221FF000C9D81 /* Brain.png */,
+				8011AFD315B221FF000C9D81 /* Burn.png */,
+				8011AFD415B221FF000C9D81 /* Burnable Folder.png */,
+				8011AFD515B221FF000C9D81 /* CandyBar.png */,
+				8011AFD615B221FF000C9D81 /* Carved Pumpkin.png */,
+				8011AFD715B221FF000C9D81 /* cd-r.png */,
+				8011AFD815B221FF000C9D81 /* cd-rw.png */,
+				8011AFD915B221FF000C9D81 /* CD.png */,
+				8011AFDA15B221FF000C9D81 /* Chainsaw.png */,
+				8011AFDB15B221FF000C9D81 /* Chat Alt.png */,
+				8011AFDC15B221FF000C9D81 /* Chat.png */,
+				8011AFDD15B221FF000C9D81 /* Chupacabra.png */,
+				8011AFDE15B221FF000C9D81 /* Classic Folder.png */,
+				8011AFDF15B221FF000C9D81 /* Coda.png */,
+				8011AFE015B221FF000C9D81 /* Connect.png */,
+				8011AFE115B221FF000C9D81 /* Console.png */,
+				8011AFE215B221FF000C9D81 /* Customize.png */,
+				8011AFE315B221FF000C9D81 /* Dashboard.png */,
+				8011AFE415B221FF000C9D81 /* Delete.png */,
+				8011AFE515B221FF000C9D81 /* Desktop.png */,
+				8011AFE615B221FF000C9D81 /* Dev Folder.png */,
+				8011AFE715B221FF000C9D81 /* Dictionary.png */,
+				8011AFE815B221FF000C9D81 /* Dinosaur.png */,
+				8011AFE915B221FF000C9D81 /* Disconnected.png */,
+				8011AFEA15B221FF000C9D81 /* Docs Folder.png */,
+				8011AFEB15B221FF000C9D81 /* Document.png */,
+				8011AFEC15B221FF000C9D81 /* Documents.png */,
+				8011AFED15B221FF000C9D81 /* Downloads Folder.png */,
+				8011AFEE15B221FF000C9D81 /* Downloads.png */,
+				8011AFEF15B221FF000C9D81 /* Drop Badge.png */,
+				8011AFF015B221FF000C9D81 /* DVD Player.png */,
+				8011AFF115B221FF000C9D81 /* dvd+r.png */,
+				8011AFF215B221FF000C9D81 /* dvd+rw.png */,
+				8011AFF315B221FF000C9D81 /* dvd-r.png */,
+				8011AFF415B221FF000C9D81 /* dvd-ram.png */,
+				8011AFF515B221FF000C9D81 /* dvd-rw.png */,
+				8011AFF615B221FF000C9D81 /* DVD.png */,
+				8011AFF715B221FF000C9D81 /* Eject.png */,
+				8011AFF815B221FF000C9D81 /* External Drive.png */,
+				8011AFF915B221FF000C9D81 /* Extra Drive.png */,
+				8011AFFA15B221FF000C9D81 /* Eyeball.png */,
+				8011AFFB15B221FF000C9D81 /* Favorites.png */,
+				8011AFFC15B221FF000C9D81 /* Find.png */,
+				8011AFFD15B221FF000C9D81 /* Finder.png */,
+				8011AFFE15B221FF000C9D81 /* Firefox alt.png */,
+				8011AFFF15B221FF000C9D81 /* Firefox.png */,
+				8011B00015B221FF000C9D81 /* Firewire Drive.png */,
+				8011B00115B221FF000C9D81 /* Flash.png */,
+				8011B00215B221FF000C9D81 /* Folder.png */,
+				8011B00315B221FF000C9D81 /* Frenzic.png */,
+				8011B00415B221FF000C9D81 /* Games.png */,
+				8011B00515B221FF000C9D81 /* Garageband.png */,
+				8011B00615B221FF000C9D81 /* Get Info.png */,
+				8011B00715B221FF000C9D81 /* Home.png */,
+				8011B00815B221FF000C9D81 /* iCal Empty.png */,
+				8011B00915B221FF000C9D81 /* iCal.png */,
+				8011B00A15B221FF000C9D81 /* Iconfactory.png */,
+				8011B00B15B221FF000C9D81 /* iDisk Public.png */,
+				8011B00C15B221FF000C9D81 /* iDisk.png */,
+				8011B00D15B221FF000C9D81 /* Image.png */,
+				8011B00E15B221FF000C9D81 /* Internal Drive.png */,
+				8011B00F15B221FF000C9D81 /* iPod Black.png */,
+				8011B01015B221FF000C9D81 /* iPod.png */,
+				8011B01115B221FF000C9D81 /* iPulse.png */,
+				8011B01215B221FF000C9D81 /* iTunes.png */,
+				8011B01315B221FF000C9D81 /* Keynote.png */,
+				8011B01415B221FF000C9D81 /* Library Folder.png */,
+				8011B01515B221FF000C9D81 /* Mail.png */,
+				8011B01615B221FF000C9D81 /* Media Drive.png */,
+				8011B01715B221FF000C9D81 /* Movie Folder.png */,
+				8011B01815B221FF000C9D81 /* Movie.png */,
+				8011B01915B221FF000C9D81 /* Music Folder.png */,
+				8011B01A15B221FF000C9D81 /* Music.png */,
+				8011B01B15B221FF000C9D81 /* Nano Black.png */,
+				8011B01C15B221FF000C9D81 /* Nano Blue.png */,
+				8011B01D15B221FF000C9D81 /* Nano Green.png */,
+				8011B01E15B221FF000C9D81 /* Nano Pink.png */,
+				8011B01F15B221FF000C9D81 /* Nano Red.png */,
+				8011B02015B221FF000C9D81 /* Nano silver.png */,
+				8011B02115B221FF000C9D81 /* Network Drive.png */,
+				8011B02215B221FF000C9D81 /* Network.png */,
+				8011B02315B221FF000C9D81 /* New Folder.png */,
+				8011B02415B221FF000C9D81 /* Numbers.png */,
+				8011B02515B221FF000C9D81 /* Package.png */,
+				8011B02615B221FF000C9D81 /* Pages.png */,
+				8011B02715B221FF000C9D81 /* Paint.png */,
+				8011B02815B221FF000C9D81 /* Pen.png */,
+				8011B02915B221FF000C9D81 /* Photo.png */,
+				8011B02A15B221FF000C9D81 /* Photoshop.png */,
+				8011B02B15B221FF000C9D81 /* Pictures Folder.png */,
+				8011B02C15B221FF000C9D81 /* Pirate.png */,
+				8011B02D15B221FF000C9D81 /* Pixadex.png */,
+				8011B02E15B221FF000C9D81 /* Poison.png */,
+				8011B02F15B221FF000C9D81 /* Preview Alt.png */,
+				8011B03015B221FF000C9D81 /* Preview.png */,
+				8011B03115B221FF000C9D81 /* Private Badge.png */,
+				8011B03215B221FF000C9D81 /* Private Folder.png */,
+				8011B03315B221FF000C9D81 /* Public Folder.png */,
+				8011B03415B221FF000C9D81 /* Public.png */,
+				8011B03515B221FF000C9D81 /* Pumpkin.png */,
+				8011B03615B221FF000C9D81 /* Quicktime.png */,
+				8011B03715B221FF000C9D81 /* Removable Drive.png */,
+				8011B03815B221FF000C9D81 /* RSS Reader.png */,
+				8011B03915B221FF000C9D81 /* Safari.png */,
+				8011B03A15B221FF000C9D81 /* Sea Monster.png */,
+				8011B03B15B221FF000C9D81 /* Shuffle g2.png */,
+				8011B03C15B221FF000C9D81 /* Shuffle Gen1.png */,
+				8011B03D15B221FF000C9D81 /* Sites Folder.png */,
+				8011B03E15B221FF000C9D81 /* Skull blue.png */,
+				8011B03F15B221FF000C9D81 /* Skull bw.png */,
+				8011B04015B221FF000C9D81 /* Skull green.png */,
+				8011B04115B221FF000C9D81 /* Skull magenta.png */,
+				8011B04215B221FF000C9D81 /* Skull orange.png */,
+				8011B04315B221FF000C9D81 /* Skull.png */,
+				8011B04415B221FF000C9D81 /* Skype.png */,
+				8011B04515B221FF000C9D81 /* Smart Folder.png */,
+				8011B04615B221FF000C9D81 /* Soul.png */,
+				8011B04715B221FF000C9D81 /* Squid Attack.png */,
+				8011B04815B221FF000C9D81 /* Stickies.png */,
+				8011B04915B221FF000C9D81 /* System Folder.png */,
+				8011B04A15B221FF000C9D81 /* System Preferences.png */,
+				8011B04B15B221FF000C9D81 /* Terminal.png */,
+				8011B04C15B221FF000C9D81 /* Text Edit.png */,
+				8011B04D15B221FF000C9D81 /* Time Machine.png */,
+				8011B04E15B221FF000C9D81 /* Toast.png */,
+				8011B04F15B221FF000C9D81 /* Torrent.png */,
+				8011B05015B221FF000C9D81 /* Transmit.png */,
+				8011B05115B221FF000C9D81 /* Trash Empty.png */,
+				8011B05215B221FF000C9D81 /* Trash Full.png */,
+				8011B05315B221FF000C9D81 /* Twitterrific.png */,
+				8011B05415B221FF000C9D81 /* USB Drive.png */,
+				8011B05515B221FF000C9D81 /* Users Folder.png */,
+				8011B05615B221FF000C9D81 /* Utilities Folder.png */,
+				8011B05715B221FF000C9D81 /* Vampire.png */,
+				8011B05815B221FF000C9D81 /* VLC.png */,
+				8011B05915B221FF000C9D81 /* Witch.png */,
+				8011B05A15B221FF000C9D81 /* xScope.png */,
+				8011B05B15B221FF000C9D81 /* Yojimbo.png */,
+				8011B05C15B221FF000C9D81 /* Zombie.png */,
+			);
+			path = Stickers;
+			sourceTree = "<group>";
+		};
+		8011B0F515B22345000C9D81 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				8011B0F615B22345000C9D81 /* phil1.jpg */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
 		FC0CBB4E15B206AD009BDA73 = {
 			isa = PBXGroup;
 			children = (
+				8011AFC215B221C7000C9D81 /* OpenGLES.framework */,
+				8011AFC015B221BF000C9D81 /* CoreVideo.framework */,
+				8011AFBE15B221B7000C9D81 /* CoreMedia.framework */,
+				8011AFBC15B221AF000C9D81 /* AVFoundation.framework */,
 				FC0CBBA115B21AD3009BDA73 /* MobileCoreServices.framework */,
 				FC0CBB9F15B21A6B009BDA73 /* CoreFoundation.framework */,
 				FC0CBB9D15B21A5F009BDA73 /* QuartzCore.framework */,
@@ -126,6 +648,7 @@
 		FC0CBB5C15B206AD009BDA73 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8011AFAC15B22179000C9D81 /* GPUImage.xcodeproj */,
 				FC0CBB9515B2116D009BDA73 /* FPPicker.framework */,
 				FC0CBB9615B2116D009BDA73 /* FPPicker.bundle */,
 				FC0CBB5D15B206AD009BDA73 /* UIKit.framework */,
@@ -153,6 +676,8 @@
 		FC0CBB6415B206AD009BDA73 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8011B0F515B22345000C9D81 /* Photos */,
+				8011AFC415B221FF000C9D81 /* Stickers */,
 				FC0CBB6515B206AD009BDA73 /* PhotoBomber-Info.plist */,
 				FC0CBB6615B206AD009BDA73 /* InfoPlist.strings */,
 				FC0CBB6915B206AD009BDA73 /* main.m */,
@@ -194,6 +719,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				8011AFBB15B22186000C9D81 /* PBXTargetDependency */,
 			);
 			name = PhotoBomber;
 			productName = PhotoBomber;
@@ -239,6 +765,12 @@
 			mainGroup = FC0CBB4E15B206AD009BDA73;
 			productRefGroup = FC0CBB5A15B206AD009BDA73 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8011AFAD15B22179000C9D81 /* Products */;
+					ProjectRef = 8011AFAC15B22179000C9D81 /* GPUImage.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FC0CBB5815B206AD009BDA73 /* PhotoBomber */,
@@ -246,6 +778,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8011AFB615B22179000C9D81 /* libGPUImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGPUImage.a;
+			remoteRef = 8011AFB515B22179000C9D81 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8011AFB815B22179000C9D81 /* GPUImageTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GPUImageTests.octest;
+			remoteRef = 8011AFB715B22179000C9D81 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FC0CBB5715B206AD009BDA73 /* Resources */ = {
@@ -256,6 +805,159 @@
 				FC0CBB7115B206AD009BDA73 /* MainStoryboard_iPhone.storyboard in Resources */,
 				FC0CBB7415B206AD009BDA73 /* MainStoryboard_iPad.storyboard in Resources */,
 				FC0CBB9915B2116D009BDA73 /* FPPicker.bundle in Resources */,
+				8011B05D15B221FF000C9D81 /* Activity Monitor.png in Resources */,
+				8011B05E15B221FF000C9D81 /* Address Book.png in Resources */,
+				8011B05F15B221FF000C9D81 /* Anxiety.png in Resources */,
+				8011B06015B221FF000C9D81 /* Aperture.png in Resources */,
+				8011B06115B221FF000C9D81 /* Apple.png in Resources */,
+				8011B06215B221FF000C9D81 /* Applications.png in Resources */,
+				8011B06315B221FF000C9D81 /* Apps Folder.png in Resources */,
+				8011B06415B221FF000C9D81 /* Automator.png in Resources */,
+				8011B06515B221FF000C9D81 /* Backup Drive.png in Resources */,
+				8011B06615B221FF000C9D81 /* BBEdit.png in Resources */,
+				8011B06715B221FF000C9D81 /* Blood Splatter.png in Resources */,
+				8011B06815B221FF000C9D81 /* Bloody Chainsaw.png in Resources */,
+				8011B06915B221FF000C9D81 /* BootCamp Drive.png in Resources */,
+				8011B06A15B221FF000C9D81 /* Brain.png in Resources */,
+				8011B06B15B221FF000C9D81 /* Burn.png in Resources */,
+				8011B06C15B221FF000C9D81 /* Burnable Folder.png in Resources */,
+				8011B06D15B221FF000C9D81 /* CandyBar.png in Resources */,
+				8011B06E15B221FF000C9D81 /* Carved Pumpkin.png in Resources */,
+				8011B06F15B221FF000C9D81 /* cd-r.png in Resources */,
+				8011B07015B221FF000C9D81 /* cd-rw.png in Resources */,
+				8011B07115B221FF000C9D81 /* CD.png in Resources */,
+				8011B07215B221FF000C9D81 /* Chainsaw.png in Resources */,
+				8011B07315B221FF000C9D81 /* Chat Alt.png in Resources */,
+				8011B07415B221FF000C9D81 /* Chat.png in Resources */,
+				8011B07515B221FF000C9D81 /* Chupacabra.png in Resources */,
+				8011B07615B221FF000C9D81 /* Classic Folder.png in Resources */,
+				8011B07715B221FF000C9D81 /* Coda.png in Resources */,
+				8011B07815B221FF000C9D81 /* Connect.png in Resources */,
+				8011B07915B221FF000C9D81 /* Console.png in Resources */,
+				8011B07A15B221FF000C9D81 /* Customize.png in Resources */,
+				8011B07B15B221FF000C9D81 /* Dashboard.png in Resources */,
+				8011B07C15B221FF000C9D81 /* Delete.png in Resources */,
+				8011B07D15B221FF000C9D81 /* Desktop.png in Resources */,
+				8011B07E15B221FF000C9D81 /* Dev Folder.png in Resources */,
+				8011B07F15B221FF000C9D81 /* Dictionary.png in Resources */,
+				8011B08015B221FF000C9D81 /* Dinosaur.png in Resources */,
+				8011B08115B221FF000C9D81 /* Disconnected.png in Resources */,
+				8011B08215B221FF000C9D81 /* Docs Folder.png in Resources */,
+				8011B08315B221FF000C9D81 /* Document.png in Resources */,
+				8011B08415B221FF000C9D81 /* Documents.png in Resources */,
+				8011B08515B221FF000C9D81 /* Downloads Folder.png in Resources */,
+				8011B08615B221FF000C9D81 /* Downloads.png in Resources */,
+				8011B08715B221FF000C9D81 /* Drop Badge.png in Resources */,
+				8011B08815B221FF000C9D81 /* DVD Player.png in Resources */,
+				8011B08915B221FF000C9D81 /* dvd+r.png in Resources */,
+				8011B08A15B221FF000C9D81 /* dvd+rw.png in Resources */,
+				8011B08B15B221FF000C9D81 /* dvd-r.png in Resources */,
+				8011B08C15B221FF000C9D81 /* dvd-ram.png in Resources */,
+				8011B08D15B221FF000C9D81 /* dvd-rw.png in Resources */,
+				8011B08E15B221FF000C9D81 /* DVD.png in Resources */,
+				8011B08F15B221FF000C9D81 /* Eject.png in Resources */,
+				8011B09015B221FF000C9D81 /* External Drive.png in Resources */,
+				8011B09115B221FF000C9D81 /* Extra Drive.png in Resources */,
+				8011B09215B221FF000C9D81 /* Eyeball.png in Resources */,
+				8011B09315B221FF000C9D81 /* Favorites.png in Resources */,
+				8011B09415B221FF000C9D81 /* Find.png in Resources */,
+				8011B09515B221FF000C9D81 /* Finder.png in Resources */,
+				8011B09615B221FF000C9D81 /* Firefox alt.png in Resources */,
+				8011B09715B221FF000C9D81 /* Firefox.png in Resources */,
+				8011B09815B221FF000C9D81 /* Firewire Drive.png in Resources */,
+				8011B09915B221FF000C9D81 /* Flash.png in Resources */,
+				8011B09A15B221FF000C9D81 /* Folder.png in Resources */,
+				8011B09B15B221FF000C9D81 /* Frenzic.png in Resources */,
+				8011B09C15B221FF000C9D81 /* Games.png in Resources */,
+				8011B09D15B221FF000C9D81 /* Garageband.png in Resources */,
+				8011B09E15B221FF000C9D81 /* Get Info.png in Resources */,
+				8011B09F15B221FF000C9D81 /* Home.png in Resources */,
+				8011B0A015B221FF000C9D81 /* iCal Empty.png in Resources */,
+				8011B0A115B221FF000C9D81 /* iCal.png in Resources */,
+				8011B0A215B221FF000C9D81 /* Iconfactory.png in Resources */,
+				8011B0A315B221FF000C9D81 /* iDisk Public.png in Resources */,
+				8011B0A415B221FF000C9D81 /* iDisk.png in Resources */,
+				8011B0A515B221FF000C9D81 /* Image.png in Resources */,
+				8011B0A615B221FF000C9D81 /* Internal Drive.png in Resources */,
+				8011B0A715B221FF000C9D81 /* iPod Black.png in Resources */,
+				8011B0A815B221FF000C9D81 /* iPod.png in Resources */,
+				8011B0A915B221FF000C9D81 /* iPulse.png in Resources */,
+				8011B0AA15B221FF000C9D81 /* iTunes.png in Resources */,
+				8011B0AB15B221FF000C9D81 /* Keynote.png in Resources */,
+				8011B0AC15B221FF000C9D81 /* Library Folder.png in Resources */,
+				8011B0AD15B221FF000C9D81 /* Mail.png in Resources */,
+				8011B0AE15B221FF000C9D81 /* Media Drive.png in Resources */,
+				8011B0AF15B221FF000C9D81 /* Movie Folder.png in Resources */,
+				8011B0B015B221FF000C9D81 /* Movie.png in Resources */,
+				8011B0B115B221FF000C9D81 /* Music Folder.png in Resources */,
+				8011B0B215B221FF000C9D81 /* Music.png in Resources */,
+				8011B0B315B221FF000C9D81 /* Nano Black.png in Resources */,
+				8011B0B415B221FF000C9D81 /* Nano Blue.png in Resources */,
+				8011B0B515B221FF000C9D81 /* Nano Green.png in Resources */,
+				8011B0B615B221FF000C9D81 /* Nano Pink.png in Resources */,
+				8011B0B715B221FF000C9D81 /* Nano Red.png in Resources */,
+				8011B0B815B221FF000C9D81 /* Nano silver.png in Resources */,
+				8011B0B915B221FF000C9D81 /* Network Drive.png in Resources */,
+				8011B0BA15B221FF000C9D81 /* Network.png in Resources */,
+				8011B0BB15B221FF000C9D81 /* New Folder.png in Resources */,
+				8011B0BC15B221FF000C9D81 /* Numbers.png in Resources */,
+				8011B0BD15B221FF000C9D81 /* Package.png in Resources */,
+				8011B0BE15B221FF000C9D81 /* Pages.png in Resources */,
+				8011B0BF15B221FF000C9D81 /* Paint.png in Resources */,
+				8011B0C015B221FF000C9D81 /* Pen.png in Resources */,
+				8011B0C115B221FF000C9D81 /* Photo.png in Resources */,
+				8011B0C215B221FF000C9D81 /* Photoshop.png in Resources */,
+				8011B0C315B221FF000C9D81 /* Pictures Folder.png in Resources */,
+				8011B0C415B221FF000C9D81 /* Pirate.png in Resources */,
+				8011B0C515B221FF000C9D81 /* Pixadex.png in Resources */,
+				8011B0C615B221FF000C9D81 /* Poison.png in Resources */,
+				8011B0C715B221FF000C9D81 /* Preview Alt.png in Resources */,
+				8011B0C815B221FF000C9D81 /* Preview.png in Resources */,
+				8011B0C915B221FF000C9D81 /* Private Badge.png in Resources */,
+				8011B0CA15B221FF000C9D81 /* Private Folder.png in Resources */,
+				8011B0CB15B221FF000C9D81 /* Public Folder.png in Resources */,
+				8011B0CC15B221FF000C9D81 /* Public.png in Resources */,
+				8011B0CD15B221FF000C9D81 /* Pumpkin.png in Resources */,
+				8011B0CE15B221FF000C9D81 /* Quicktime.png in Resources */,
+				8011B0CF15B221FF000C9D81 /* Removable Drive.png in Resources */,
+				8011B0D015B221FF000C9D81 /* RSS Reader.png in Resources */,
+				8011B0D115B221FF000C9D81 /* Safari.png in Resources */,
+				8011B0D215B221FF000C9D81 /* Sea Monster.png in Resources */,
+				8011B0D315B221FF000C9D81 /* Shuffle g2.png in Resources */,
+				8011B0D415B221FF000C9D81 /* Shuffle Gen1.png in Resources */,
+				8011B0D515B221FF000C9D81 /* Sites Folder.png in Resources */,
+				8011B0D615B221FF000C9D81 /* Skull blue.png in Resources */,
+				8011B0D715B221FF000C9D81 /* Skull bw.png in Resources */,
+				8011B0D815B221FF000C9D81 /* Skull green.png in Resources */,
+				8011B0D915B221FF000C9D81 /* Skull magenta.png in Resources */,
+				8011B0DA15B221FF000C9D81 /* Skull orange.png in Resources */,
+				8011B0DB15B221FF000C9D81 /* Skull.png in Resources */,
+				8011B0DC15B221FF000C9D81 /* Skype.png in Resources */,
+				8011B0DD15B221FF000C9D81 /* Smart Folder.png in Resources */,
+				8011B0DE15B221FF000C9D81 /* Soul.png in Resources */,
+				8011B0DF15B221FF000C9D81 /* Squid Attack.png in Resources */,
+				8011B0E015B221FF000C9D81 /* Stickies.png in Resources */,
+				8011B0E115B221FF000C9D81 /* System Folder.png in Resources */,
+				8011B0E215B221FF000C9D81 /* System Preferences.png in Resources */,
+				8011B0E315B221FF000C9D81 /* Terminal.png in Resources */,
+				8011B0E415B221FF000C9D81 /* Text Edit.png in Resources */,
+				8011B0E515B221FF000C9D81 /* Time Machine.png in Resources */,
+				8011B0E615B221FF000C9D81 /* Toast.png in Resources */,
+				8011B0E715B221FF000C9D81 /* Torrent.png in Resources */,
+				8011B0E815B221FF000C9D81 /* Transmit.png in Resources */,
+				8011B0E915B221FF000C9D81 /* Trash Empty.png in Resources */,
+				8011B0EA15B221FF000C9D81 /* Trash Full.png in Resources */,
+				8011B0EB15B221FF000C9D81 /* Twitterrific.png in Resources */,
+				8011B0EC15B221FF000C9D81 /* USB Drive.png in Resources */,
+				8011B0ED15B221FF000C9D81 /* Users Folder.png in Resources */,
+				8011B0EE15B221FF000C9D81 /* Utilities Folder.png in Resources */,
+				8011B0EF15B221FF000C9D81 /* Vampire.png in Resources */,
+				8011B0F015B221FF000C9D81 /* VLC.png in Resources */,
+				8011B0F115B221FF000C9D81 /* Witch.png in Resources */,
+				8011B0F215B221FF000C9D81 /* xScope.png in Resources */,
+				8011B0F315B221FF000C9D81 /* Yojimbo.png in Resources */,
+				8011B0F415B221FF000C9D81 /* Zombie.png in Resources */,
+				8011B0F715B22345000C9D81 /* phil1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +1010,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8011AFBB15B22186000C9D81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPUImage;
+			targetProxy = 8011AFBA15B22186000C9D81 /* PBXContainerItemProxy */;
+		};
 		FC0CBB8315B206AD009BDA73 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FC0CBB5815B206AD009BDA73 /* PhotoBomber */;
@@ -407,6 +1114,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoBomber/PhotoBomber-Prefix.pch";
+				HEADER_SEARCH_PATHS = "GPUImage.framework/Source/**";
 				INFOPLIST_FILE = "PhotoBomber/PhotoBomber-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -422,6 +1130,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoBomber/PhotoBomber-Prefix.pch";
+				HEADER_SEARCH_PATHS = "GPUImage.framework/Source/**";
 				INFOPLIST_FILE = "PhotoBomber/PhotoBomber-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -483,6 +1192,7 @@
 				FC0CBB9115B206AD009BDA73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC0CBB9215B206AD009BDA73 /* Build configuration list for PBXNativeTarget "PhotoBomberTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +1201,7 @@
 				FC0CBB9415B206AD009BDA73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

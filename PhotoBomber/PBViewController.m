@@ -7,8 +7,8 @@
 //
 
 #import <FPPicker/FPPicker.h>
-
 #import "PBViewController.h"
+#import "AFPhotoEditorController.h"
 
 @interface PBViewController ()
 
@@ -42,6 +42,12 @@
     }
 }
 
+- (void)displayEditorForImage:(UIImage *)imageToEdit
+{
+    AFPhotoEditorController *editorController = [[AFPhotoEditorController alloc] initWithImage:imageToEdit];
+    [editorController setDelegate:self];
+    [self presentModalViewController:editorController animated:YES];
+}
 
 - (void)setupOverlay{
     UIImage *originalImage = [UIImage imageNamed:@"phil1.jpg"];
@@ -58,7 +64,7 @@
     
     UIImage *blendedImage = [overlayBlendFilter imageFromCurrentlyProcessedOutputWithOrientation:originalImage.imageOrientation];
     
-    
+    [self displayEditorForImage:blendedImage];
 }
 
 

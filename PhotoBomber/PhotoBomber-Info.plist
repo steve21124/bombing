@@ -45,5 +45,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>Filepicker API Key</key>
+	<string>AjAoZGwKKToqPhAIG7Rxfz</string>
 </dict>
 </plist>

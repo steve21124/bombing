@@ -10,6 +10,13 @@
 #import <UIKit/UIKit.h>
 #import "GPUImage.h"
 
-@interface PBViewController : UIViewController<FPPickerDelegate>
-
+@interface PBViewController : UIViewController<FPPickerDelegate, UIPopoverControllerDelegate, FPSaveDelegate> {
+    IBOutlet UIButton *button;
+    IBOutlet UIButton *savebutton;
+    
+    IBOutlet UIImageView *image;
+    UIPopoverController *popoverController;
+}
+@property (nonatomic, retain) UIImageView *image;
+@property (nonatomic, retain) UIPopoverController *popoverController;
 @end

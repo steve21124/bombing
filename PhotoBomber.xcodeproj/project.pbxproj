@@ -1116,6 +1116,7 @@
 				GCC_PREFIX_HEADER = "PhotoBomber/PhotoBomber-Prefix.pch";
 				HEADER_SEARCH_PATHS = "GPUImage.framework/Source/**";
 				INFOPLIST_FILE = "PhotoBomber/PhotoBomber-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1132,6 +1133,7 @@
 				GCC_PREFIX_HEADER = "PhotoBomber/PhotoBomber-Prefix.pch";
 				HEADER_SEARCH_PATHS = "GPUImage.framework/Source/**";
 				INFOPLIST_FILE = "PhotoBomber/PhotoBomber-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

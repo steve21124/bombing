@@ -17,6 +17,8 @@
 @implementation PBViewController
 @synthesize popoverController;
 @synthesize image;
+@synthesize image1;
+@synthesize image2;
 
 - (void)viewDidLoad
 {
@@ -24,7 +26,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     //Test Overlay
-    [self setupOverlay];
+//    [self setupOverlay];
 }
 
 - (void)viewDidUnload
@@ -49,9 +51,9 @@
     [self presentModalViewController:editorController animated:YES];
 }
 
-- (void)setupOverlay{
-    UIImage *originalImage = [UIImage imageNamed:@"phil1.jpg"];
-    UIImage *noiseLayer = [UIImage imageNamed:@"Anxiety.png"];
+- (IBAction)setupOverlay:(id)sender {
+    UIImage *originalImage = self.image1.image;
+    UIImage *noiseLayer = self.image2.image;
     
     GPUImageOverlayBlendFilter *overlayBlendFilter = [[GPUImageOverlayBlendFilter alloc] init];
     GPUImagePicture *pic1 = [[GPUImagePicture alloc] initWithImage:originalImage];
@@ -65,6 +67,7 @@
     UIImage *blendedImage = [overlayBlendFilter imageFromCurrentlyProcessedOutputWithOrientation:originalImage.imageOrientation];
     
     [self displayEditorForImage:blendedImage];
+//    self.image.image = blendedImage;    
 }
 
 
@@ -184,7 +187,13 @@
 {
     NSLog(@"FILE CHOSEN: %@", info);
     
-    image.image = [info objectForKey:@"FPPickerControllerOriginalImage"];
+//    image.image = [info objectForKey:@"FPPickerControllerOriginalImage"];
+    if (!self.image1.image) {
+        self.image1.image = [info objectForKey:@"FPPickerControllerOriginalImage"];
+    } else {
+        self.image2.image = [info objectForKey:@"FPPickerControllerOriginalImage"];
+    }
+    
     [popoverController dismissPopoverAnimated:YES];
     [self dismissModalViewControllerAnimated:YES];
     

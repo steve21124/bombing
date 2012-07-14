@@ -14,9 +14,16 @@
     IBOutlet UIButton *button;
     IBOutlet UIButton *savebutton;
     
+    IBOutlet UIImageView *image1;
+    IBOutlet UIImageView *image2;
+    
     IBOutlet UIImageView *image;
     UIPopoverController *popoverController;
 }
+
+@property (nonatomic, retain) UIImageView *image1;
+@property (nonatomic, retain) UIImageView *image2;
 @property (nonatomic, retain) UIImageView *image;
 @property (nonatomic, retain) UIPopoverController *popoverController;
+
 @end

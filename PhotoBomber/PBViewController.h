@@ -6,8 +6,9 @@
 //  Copyright (c) 2012 Jawbone. All rights reserved.
 //
 
+#import <FPPicker/FPPicker.h>
 #import <UIKit/UIKit.h>
 
-@interface PBViewController : UIViewController
+@interface PBViewController : UIViewController<FPPickerDelegate>
 
 @end

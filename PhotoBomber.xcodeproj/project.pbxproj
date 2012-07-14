@@ -21,6 +21,14 @@
 		FC0CBB8115B206AD009BDA73 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBB5F15B206AD009BDA73 /* Foundation.framework */; };
 		FC0CBB8915B206AD009BDA73 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC0CBB8715B206AD009BDA73 /* InfoPlist.strings */; };
 		FC0CBB8C15B206AD009BDA73 /* PhotoBomberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0CBB8B15B206AD009BDA73 /* PhotoBomberTests.m */; };
+		FC0CBB9715B2116D009BDA73 /* FPPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBB9515B2116D009BDA73 /* FPPicker.framework */; };
+		FC0CBB9815B2116D009BDA73 /* FPPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBB9515B2116D009BDA73 /* FPPicker.framework */; };
+		FC0CBB9915B2116D009BDA73 /* FPPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC0CBB9615B2116D009BDA73 /* FPPicker.bundle */; };
+		FC0CBB9A15B2116D009BDA73 /* FPPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC0CBB9615B2116D009BDA73 /* FPPicker.bundle */; };
+		FC0CBB9C15B21A40009BDA73 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBB9B15B21A40009BDA73 /* AssetsLibrary.framework */; };
+		FC0CBB9E15B21A5F009BDA73 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBB9D15B21A5F009BDA73 /* QuartzCore.framework */; };
+		FC0CBBA015B21A6B009BDA73 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBB9F15B21A6B009BDA73 /* CoreFoundation.framework */; };
+		FC0CBBA215B21AD3009BDA73 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBBA115B21AD3009BDA73 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,22 +46,28 @@
 		FC0CBB5D15B206AD009BDA73 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC0CBB5F15B206AD009BDA73 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC0CBB6115B206AD009BDA73 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		FC0CBB6515B206AD009BDA73 /* PhotoBomber-Info.plist */ = {isa = PBXFileReference; path = "PhotoBomber-Info.plist"; sourceTree = "<group>"; };
+		FC0CBB6515B206AD009BDA73 /* PhotoBomber-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhotoBomber-Info.plist"; sourceTree = "<group>"; };
 		FC0CBB6715B206AD009BDA73 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FC0CBB6915B206AD009BDA73 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FC0CBB6B15B206AD009BDA73 /* PhotoBomber-Prefix.pch */ = {isa = PBXFileReference; path = "PhotoBomber-Prefix.pch"; sourceTree = "<group>"; };
-		FC0CBB6C15B206AD009BDA73 /* PBAppDelegate.h */ = {isa = PBXFileReference; path = PBAppDelegate.h; sourceTree = "<group>"; };
+		FC0CBB6B15B206AD009BDA73 /* PhotoBomber-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoBomber-Prefix.pch"; sourceTree = "<group>"; };
+		FC0CBB6C15B206AD009BDA73 /* PBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBAppDelegate.h; sourceTree = "<group>"; };
 		FC0CBB6D15B206AD009BDA73 /* PBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBAppDelegate.m; sourceTree = "<group>"; };
 		FC0CBB7015B206AD009BDA73 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		FC0CBB7315B206AD009BDA73 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		FC0CBB7515B206AD009BDA73 /* PBViewController.h */ = {isa = PBXFileReference; path = PBViewController.h; sourceTree = "<group>"; };
+		FC0CBB7515B206AD009BDA73 /* PBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBViewController.h; sourceTree = "<group>"; };
 		FC0CBB7615B206AD009BDA73 /* PBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBViewController.m; sourceTree = "<group>"; };
 		FC0CBB7D15B206AD009BDA73 /* PhotoBomberTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoBomberTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC0CBB7E15B206AD009BDA73 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		FC0CBB8615B206AD009BDA73 /* PhotoBomberTests-Info.plist */ = {isa = PBXFileReference; path = "PhotoBomberTests-Info.plist"; sourceTree = "<group>"; };
+		FC0CBB8615B206AD009BDA73 /* PhotoBomberTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhotoBomberTests-Info.plist"; sourceTree = "<group>"; };
 		FC0CBB8815B206AD009BDA73 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FC0CBB8A15B206AD009BDA73 /* PhotoBomberTests.h */ = {isa = PBXFileReference; path = PhotoBomberTests.h; sourceTree = "<group>"; };
+		FC0CBB8A15B206AD009BDA73 /* PhotoBomberTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoBomberTests.h; sourceTree = "<group>"; };
 		FC0CBB8B15B206AD009BDA73 /* PhotoBomberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoBomberTests.m; sourceTree = "<group>"; };
+		FC0CBB9515B2116D009BDA73 /* FPPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FPPicker.framework; sourceTree = "<group>"; };
+		FC0CBB9615B2116D009BDA73 /* FPPicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FPPicker.bundle; sourceTree = "<group>"; };
+		FC0CBB9B15B21A40009BDA73 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		FC0CBB9D15B21A5F009BDA73 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FC0CBB9F15B21A6B009BDA73 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		FC0CBBA115B21AD3009BDA73 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +75,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC0CBBA215B21AD3009BDA73 /* MobileCoreServices.framework in Frameworks */,
+				FC0CBBA015B21A6B009BDA73 /* CoreFoundation.framework in Frameworks */,
+				FC0CBB9E15B21A5F009BDA73 /* QuartzCore.framework in Frameworks */,
+				FC0CBB9C15B21A40009BDA73 /* AssetsLibrary.framework in Frameworks */,
 				FC0CBB5E15B206AD009BDA73 /* UIKit.framework in Frameworks */,
 				FC0CBB6015B206AD009BDA73 /* Foundation.framework in Frameworks */,
 				FC0CBB6215B206AD009BDA73 /* CoreGraphics.framework in Frameworks */,
+				FC0CBB9715B2116D009BDA73 /* FPPicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +93,7 @@
 				FC0CBB7F15B206AD009BDA73 /* SenTestingKit.framework in Frameworks */,
 				FC0CBB8015B206AD009BDA73 /* UIKit.framework in Frameworks */,
 				FC0CBB8115B206AD009BDA73 /* Foundation.framework in Frameworks */,
+				FC0CBB9815B2116D009BDA73 /* FPPicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +103,10 @@
 		FC0CBB4E15B206AD009BDA73 = {
 			isa = PBXGroup;
 			children = (
+				FC0CBBA115B21AD3009BDA73 /* MobileCoreServices.framework */,
+				FC0CBB9F15B21A6B009BDA73 /* CoreFoundation.framework */,
+				FC0CBB9D15B21A5F009BDA73 /* QuartzCore.framework */,
+				FC0CBB9B15B21A40009BDA73 /* AssetsLibrary.framework */,
 				FC0CBB6315B206AD009BDA73 /* PhotoBomber */,
 				FC0CBB8415B206AD009BDA73 /* PhotoBomberTests */,
 				FC0CBB5C15B206AD009BDA73 /* Frameworks */,
@@ -102,6 +126,8 @@
 		FC0CBB5C15B206AD009BDA73 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC0CBB9515B2116D009BDA73 /* FPPicker.framework */,
+				FC0CBB9615B2116D009BDA73 /* FPPicker.bundle */,
 				FC0CBB5D15B206AD009BDA73 /* UIKit.framework */,
 				FC0CBB5F15B206AD009BDA73 /* Foundation.framework */,
 				FC0CBB6115B206AD009BDA73 /* CoreGraphics.framework */,
@@ -229,6 +255,7 @@
 				FC0CBB6815B206AD009BDA73 /* InfoPlist.strings in Resources */,
 				FC0CBB7115B206AD009BDA73 /* MainStoryboard_iPhone.storyboard in Resources */,
 				FC0CBB7415B206AD009BDA73 /* MainStoryboard_iPad.storyboard in Resources */,
+				FC0CBB9915B2116D009BDA73 /* FPPicker.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC0CBB8915B206AD009BDA73 /* InfoPlist.strings in Resources */,
+				FC0CBB9A15B2116D009BDA73 /* FPPicker.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +401,10 @@
 		FC0CBB9015B206AD009BDA73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoBomber/PhotoBomber-Prefix.pch";
 				INFOPLIST_FILE = "PhotoBomber/PhotoBomber-Info.plist";
@@ -384,6 +416,10 @@
 		FC0CBB9115B206AD009BDA73 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoBomber/PhotoBomber-Prefix.pch";
 				INFOPLIST_FILE = "PhotoBomber/PhotoBomber-Info.plist";
@@ -399,6 +435,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoBomber/PhotoBomber-Prefix.pch";
@@ -416,6 +453,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoBomber/PhotoBomber-Prefix.pch";

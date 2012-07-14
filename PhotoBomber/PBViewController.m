@@ -220,4 +220,18 @@
     [popoverController dismissPopoverAnimated:YES];
 }
 
+
+#pragma mark - Aviary Methods
+- (void)photoEditor:(AFPhotoEditorController *)editor finishedWithImage:(UIImage *)image
+{
+   // [[self imageView] setImage:image];
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)photoEditorCanceled:(AFPhotoEditorController *)editor
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+
 @end

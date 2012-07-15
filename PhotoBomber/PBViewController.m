@@ -145,26 +145,36 @@
     UIImage *originalImage = self.image1.image;
     UIImage *noiseLayer = self.image2.image;
     
-    [self uploadFile:UIImagePNGRepresentation(noiseLayer)];
+    if ([self uploadFile:UIImagePNGRepresentation(noiseLayer)]) {
     
-    GPUImageOverlayBlendFilter *overlayBlendFilter = [[GPUImageOverlayBlendFilter alloc] init];
-    GPUImagePicture *pic1 = [[GPUImagePicture alloc] initWithImage:originalImage];
-    GPUImagePicture *pic2 = [[GPUImagePicture alloc] initWithImage:noiseLayer];
-    
-    [pic1 addTarget:overlayBlendFilter];
-    [pic1 processImage];
-    [pic2 addTarget:overlayBlendFilter];
-    [pic2 processImage];
-    
-    UIImage *blendedImage = [overlayBlendFilter imageFromCurrentlyProcessedOutputWithOrientation:originalImage.imageOrientation];
-    
-   //Blend Image Method 1 
-  //  [self displayEditorForImage:blendedImage];
-    
-    //Blend Image Method 2
-    [self displayEditorForImage:[self imageWithView:canvas]];
-    
-//    self.image.image = blendedImage;    
+        GPUImageOverlayBlendFilter *overlayBlendFilter = [[GPUImageOverlayBlendFilter alloc] init];
+        GPUImagePicture *pic1 = [[GPUImagePicture alloc] initWithImage:originalImage];
+        GPUImagePicture *pic2 = [[GPUImagePicture alloc] initWithImage:noiseLayer];
+        
+        [pic1 addTarget:overlayBlendFilter];
+        [pic1 processImage];
+        [pic2 addTarget:overlayBlendFilter];
+        [pic2 processImage];
+        
+        UIImage *blendedImage = [overlayBlendFilter imageFromCurrentlyProcessedOutputWithOrientation:originalImage.imageOrientation];
+        
+        //Blend Image Method 1 
+        //[self displayEditorForImage:blendedImage];
+        
+        //Blend Image Method 2
+        [self displayEditorForImage:[self imageWithView:canvas]];
+        
+        //self.image.image = blendedImage;
+        
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle: @"Error"
+                              message: @"Error mashing images"
+                              delegate: nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 //Merge uiview
@@ -400,7 +410,7 @@
 
 #pragma mark Uploading file
 
--(void)uploadFile:(NSData *)data
+-(BOOL)uploadFile:(NSData *)data
 {
     // variables
     NSURL *url;
@@ -485,6 +495,10 @@
         NSLog(@"newStr: %@", newStr);
     }
     
+    if (!segmentationFinished) {
+        return NO;
+    }
+    
     // get resulting PNG with transparency image
     url = [NSURL URLWithString:[NSString stringWithFormat:@"%@get/%@?version=HardMasked&partner_username=%@&partner_apikey=%@", apiUrl, imageId, username, apiKey]];
     request = [NSMutableURLRequest requestWithURL:url];
@@ -497,6 +511,8 @@
     newStr = [[NSString alloc] initWithData:responseData
                                    encoding:NSUTF8StringEncoding];    
     NSLog(@"newStr: %@", newStr);
+    
+    return YES;
     
 }
 

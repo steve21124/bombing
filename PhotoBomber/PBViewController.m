@@ -402,16 +402,30 @@
 
 -(void)uploadFile:(NSData *)data
 {
-    NSURL *url = [NSURL URLWithString:@"http://flashfotoapi.com/api/add/?privacy=public&partner_username=philster&partner_apikey=LUPbRi4fzoWpCjh3ieFVcHZbMCmlrWbs"];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    // variables
+    NSURL *url;
+    NSMutableURLRequest *request;
+    NSURLResponse *response;
+    NSError *err;
+    NSData *responseData;
+    NSString *newStr;
+    NSString *imageId;
+    
+    NSString *apiUrl = @"http://flashfotoapi.com/api/";
+    NSString *username = @"philster";
+    NSString *apiKey = @"LUPbRi4fzoWpCjh3ieFVcHZbMCmlrWbs";
+    
+    // upload photo
+    url = [NSURL URLWithString:[NSString stringWithFormat:@"%@add/?privacy=public&partner_username=%@&partner_apikey=%@", apiUrl, username, apiKey]];
+    request = [NSMutableURLRequest requestWithURL:url];
     
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody:data];
     
-    NSURLResponse *response;
-    NSError *err;
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     NSLog(@"responseData: %@", responseData);
+    
+    // parse json response
     NSString* jsonString = [[NSString alloc] initWithData:responseData
                                               encoding:NSUTF8StringEncoding];    
     NSLog(@"jsonString: %@", jsonString);
@@ -422,8 +436,68 @@
     NSLog(@"jsonObjects: %@", jsonObjects);
     
     NSDictionary *imageVersionDictionary = [jsonObjects objectForKey:@"ImageVersion"];
-    NSString *imageId = [imageVersionDictionary objectForKey:@"image_id"];
+    imageId = [imageVersionDictionary objectForKey:@"image_id"];
     NSLog(@"image id: %@", imageId);
+    
+    // detect face
+    url = [NSURL URLWithString:[NSString stringWithFormat:@"%@findfaces/%@?partner_username=%@&partner_apikey=%@", apiUrl, imageId, username, apiKey]];
+    request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:data];
+    
+    responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    NSLog(@"responseData: %@", responseData);
+    newStr = [[NSString alloc] initWithData:responseData
+                                   encoding:NSUTF8StringEncoding];    
+    NSLog(@"newStr: %@", newStr);
+    
+    // parse json response
+    
+    // remove the background
+    url = [NSURL URLWithString:[NSString stringWithFormat:@"%@segment/%@?partner_username=%@&partner_apikey=%@", apiUrl, imageId, username, apiKey]];
+    request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:data];
+    
+    responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    NSLog(@"responseData: %@", responseData);
+    newStr = [[NSString alloc] initWithData:responseData
+                                   encoding:NSUTF8StringEncoding];    
+    NSLog(@"newStr: %@", newStr);
+    
+    // parse json response
+    
+    BOOL segmentationFinished = NO;
+    while (!segmentationFinished) {
+        // check segment status
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@segment_status/%@?partner_username=%@&partner_apikey=%@", apiUrl, imageId, username, apiKey]];
+        request = [NSMutableURLRequest requestWithURL:url];
+        
+        [request setHTTPMethod:@"POST"];
+        [request setHTTPBody:data];
+        
+        responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+        NSLog(@"responseData: %@", responseData);
+        newStr = [[NSString alloc] initWithData:responseData
+                                       encoding:NSUTF8StringEncoding];    
+        NSLog(@"newStr: %@", newStr);
+    }
+    
+    // get resulting PNG with transparency image
+    url = [NSURL URLWithString:[NSString stringWithFormat:@"%@get/%@?version=HardMasked&partner_username=%@&partner_apikey=%@", apiUrl, imageId, username, apiKey]];
+    request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:data];
+    
+    responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    NSLog(@"responseData: %@", responseData);
+    newStr = [[NSString alloc] initWithData:responseData
+                                   encoding:NSUTF8StringEncoding];    
+    NSLog(@"newStr: %@", newStr);
+    
 }
 
 #pragma mark UIGestureRegognizerDelegate

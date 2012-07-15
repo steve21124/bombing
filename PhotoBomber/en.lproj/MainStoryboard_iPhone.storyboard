@@ -31,9 +31,9 @@
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="DRP-r7-rNm" appends="YES" id="SKI-dd-R9q"/>
                                     <outletCollection property="gestureRecognizers" destination="4CX-hp-tag" appends="YES" id="afv-Z6-RW1"/>
                                     <outletCollection property="gestureRecognizers" destination="bb8-H3-E3u" appends="YES" id="cHO-3c-nP7"/>
+                                    <outletCollection property="gestureRecognizers" destination="DRP-r7-rNm" appends="YES" id="SKI-dd-R9q"/>
                                 </connections>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="9Ea-Kf-Bfz">
@@ -115,6 +115,11 @@
                                     <action selector="savingAction:" destination="2" eventType="touchUpInside" id="8kk-E3-A8Z"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="Vaj-3m-8M6">
+                                <rect key="frame" x="143" y="210" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -124,6 +129,7 @@
                         <outlet property="image" destination="9Ea-Kf-Bfz" id="C5b-eb-BeD"/>
                         <outlet property="image1" destination="vzz-me-GnV" id="npZ-SN-8f9"/>
                         <outlet property="image2" destination="WhA-uW-8Jo" id="Nw6-aJ-tlO"/>
+                        <outlet property="loadingIndicator" destination="Vaj-3m-8M6" id="Dab-aF-IuZ"/>
                         <outlet property="mashImagesButton" destination="OTd-QS-rNL" id="ZNp-C1-2bM"/>
                         <outlet property="postcardButton" destination="3Im-9v-vCs" id="qYp-B8-67U"/>
                         <outlet property="publishButton" destination="g9B-0S-EHs" id="CgN-nt-2N4"/>
@@ -163,6 +169,7 @@
                 <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="image1" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="image2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="loadingIndicator" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="mashImagesButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="postcardButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="publishButton" candidateClass="UIButton"/>

@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *publishButton;
 @property (weak, nonatomic) IBOutlet UIButton *postcardButton;
 @property (weak, nonatomic) IBOutlet UIButton *resetButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingIndicator;
 
 @end
 
@@ -32,6 +33,7 @@
 @synthesize publishButton;
 @synthesize postcardButton;
 @synthesize resetButton;
+@synthesize loadingIndicator;
 @synthesize popoverController;
 @synthesize image;
 @synthesize image1;
@@ -56,6 +58,8 @@
     [self setPublishButton:nil];
     [self setPostcardButton:nil];
     [self setResetButton:nil];
+    loadingIndicator = nil;
+    [self setLoadingIndicator:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     
@@ -131,6 +135,7 @@
     self.postcardButton.hidden = YES;
     self.resetButton.hidden = YES;
     
+    [self.loadingIndicator startAnimating];
     [self uploadFile:UIImagePNGRepresentation(self.image2.image)];
 }
 
@@ -526,12 +531,14 @@
     NSLog(@"jsonString: %@", jsonString);
     UIImage *maskedImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]]];
     self.image2.image = maskedImage;
+    
+    [self.loadingIndicator stopAnimating];
 
     return YES;
     
 }
 
-#pragma mark UIGestureRecognizerDelegate
+#pragma mark - UIGestureRecognizerDelegate
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     return ![gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]] && ![gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]];
     

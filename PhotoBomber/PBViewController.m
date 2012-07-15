@@ -47,6 +47,9 @@
     //Test Overlay
 //    [self setupOverlay];
     [self configureStep1];
+    
+    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"Background1.jpg"]];
+    self.view.backgroundColor = background;     
 }
 
 - (void)viewDidUnload

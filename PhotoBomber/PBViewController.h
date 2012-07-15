@@ -41,4 +41,6 @@
 -(IBAction)move:(UIGestureRecognizer *)sender;
 -(IBAction)tapped:(UIGestureRecognizer *)sender;
 
+- (UIImage *) imageWithView:(UIView *)view;
+
 @end

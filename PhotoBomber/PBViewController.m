@@ -158,9 +158,29 @@
     
     UIImage *blendedImage = [overlayBlendFilter imageFromCurrentlyProcessedOutputWithOrientation:originalImage.imageOrientation];
     
-    [self displayEditorForImage:blendedImage];
+   //Blend Image Method 1 
+  //  [self displayEditorForImage:blendedImage];
+    
+    //Blend Image Method 2
+    [self displayEditorForImage:[self imageWithView:canvas]];
+    
 //    self.image.image = blendedImage;    
 }
+
+//Merge uiview
+- (UIImage *) imageWithView:(UIView *)view
+{
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    UIImage * img = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return img;
+}
+
+
 
 - (IBAction)pickerAction: (id) sender {
     

@@ -458,10 +458,14 @@
     
     responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     NSLog(@"responseData: %@", responseData);
-    newStr = [[NSString alloc] initWithData:responseData
+    jsonString = [[NSString alloc] initWithData:responseData
                                    encoding:NSUTF8StringEncoding];    
-    NSLog(@"newStr: %@", newStr);
+    NSLog(@"jsonString: %@", jsonString);
     
+    // if json is just "[]", then no face was detected
+    if ([jsonString length] <= 2) {
+        return NO;
+    }
     // parse json response
     
     // remove the background
@@ -473,13 +477,18 @@
     
     responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     NSLog(@"responseData: %@", responseData);
-    newStr = [[NSString alloc] initWithData:responseData
+    jsonString = [[NSString alloc] initWithData:responseData
                                    encoding:NSUTF8StringEncoding];    
-    NSLog(@"newStr: %@", newStr);
+    NSLog(@"jsonString: %@", jsonString);
     
     // parse json response
-    
+    jsonObjects = [jsonParser objectWithString:jsonString error:&error];
+    NSLog(@"jsonObjects: %@", jsonObjects);
+    NSString *segmentationStatus = [jsonObjects objectForKey:@"segmentation_status"];
     BOOL segmentationFinished = NO;
+    if ([segmentationStatus isEqualToString:@"finished"]) {
+        segmentationFinished = YES;
+    }
     while (!segmentationFinished) {
         // check segment status
         url = [NSURL URLWithString:[NSString stringWithFormat:@"%@segment_status/%@?partner_username=%@&partner_apikey=%@", apiUrl, imageId, username, apiKey]];
@@ -492,7 +501,7 @@
         NSLog(@"responseData: %@", responseData);
         newStr = [[NSString alloc] initWithData:responseData
                                        encoding:NSUTF8StringEncoding];    
-        NSLog(@"newStr: %@", newStr);
+        NSLog(@"jsonString: %@", jsonString);
     }
     
     if (!segmentationFinished) {
@@ -510,7 +519,7 @@
     NSLog(@"responseData: %@", responseData);
     newStr = [[NSString alloc] initWithData:responseData
                                    encoding:NSUTF8StringEncoding];    
-    NSLog(@"newStr: %@", newStr);
+    NSLog(@"jsonString: %@", jsonString);
     
     return YES;
     

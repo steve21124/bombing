@@ -412,9 +412,18 @@
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     NSLog(@"responseData: %@", responseData);
-    NSString* newStr = [[NSString alloc] initWithData:responseData
+    NSString* jsonString = [[NSString alloc] initWithData:responseData
                                               encoding:NSUTF8StringEncoding];    
-    NSLog(@"newStr: %@", newStr);
+    NSLog(@"jsonString: %@", jsonString);
+    
+    SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
+    NSError *error = nil;
+    NSDictionary *jsonObjects = [jsonParser objectWithString:jsonString error:&error];
+    NSLog(@"jsonObjects: %@", jsonObjects);
+    
+    NSDictionary *imageVersionDictionary = [jsonObjects objectForKey:@"ImageVersion"];
+    NSString *imageId = [imageVersionDictionary objectForKey:@"image_id"];
+    NSLog(@"image id: %@", imageId);
 }
 
 #pragma mark UIGestureRegognizerDelegate

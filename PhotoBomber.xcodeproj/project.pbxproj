@@ -199,6 +199,7 @@
 		802462FE15B264A200AAB103 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802462FD15B264A200AAB103 /* CFNetwork.framework */; };
 		8024630015B2650A00AAB103 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 802462F915B263C000AAB103 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8024630215B2656600AAB103 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8024630115B2656600AAB103 /* SystemConfiguration.framework */; };
+		80295ED015B341E500592E69 /* Background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80295ECF15B341E500592E69 /* Background1.jpg */; };
 		FC0CBB5E15B206AD009BDA73 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBB5D15B206AD009BDA73 /* UIKit.framework */; };
 		FC0CBB6015B206AD009BDA73 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBB5F15B206AD009BDA73 /* Foundation.framework */; };
 		FC0CBB6215B206AD009BDA73 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBB6115B206AD009BDA73 /* CoreGraphics.framework */; };
@@ -509,6 +510,7 @@
 		802462FB15B2641F00AAB103 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		802462FD15B264A200AAB103 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		8024630115B2656600AAB103 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		80295ECF15B341E500592E69 /* Background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background1.jpg; sourceTree = "<group>"; };
 		FC0CBB5915B206AD009BDA73 /* PhotoBomber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoBomber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC0CBB5D15B206AD009BDA73 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC0CBB5F15B206AD009BDA73 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -784,6 +786,7 @@
 		8011B0F515B22345000C9D81 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
+				80295ECF15B341E500592E69 /* Background1.jpg */,
 				8011B0F615B22345000C9D81 /* phil1.jpg */,
 			);
 			path = Photos;
@@ -1317,6 +1320,7 @@
 				8024601F15B22B0900AAB103 /* AviarySDKResources.bundle in Resources */,
 				FC0CBBCF15B23C5F009BDA73 /* Sincerely.framework in Resources */,
 				802462E715B25FD400AAB103 /* README-GHUnit in Resources */,
+				80295ED015B341E500592E69 /* Background1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

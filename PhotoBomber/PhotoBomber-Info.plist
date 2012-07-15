@@ -47,5 +47,7 @@
 	</array>
 	<key>Filepicker API Key</key>
 	<string>AjAoZGwKKToqPhAIG7Rxfz</string>
+	<key>CFBundleIconFile</key>
+	<string>photobomb.png</string>
 </dict>
 </plist>

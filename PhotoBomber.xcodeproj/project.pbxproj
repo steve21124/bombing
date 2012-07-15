@@ -251,6 +251,7 @@
 		FC0CBC0A15B2775A009BDA73 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0CBBF215B2775A009BDA73 /* SBJsonUTF8Stream.m */; };
 		FC0CBC0B15B2775A009BDA73 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0CBBF415B2775A009BDA73 /* SBJsonWriter.m */; };
 		FC0CBC0C15B2775A009BDA73 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0CBBF415B2775A009BDA73 /* SBJsonWriter.m */; };
+		FC6EEA8F15B34FA30009D933 /* photobomb.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6EEA8E15B34FA30009D933 /* photobomb.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -565,6 +566,7 @@
 		FC0CBBF215B2775A009BDA73 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		FC0CBBF315B2775A009BDA73 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		FC0CBBF415B2775A009BDA73 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		FC6EEA8E15B34FA30009D933 /* photobomb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photobomb.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -987,6 +989,7 @@
 		FC0CBB6315B206AD009BDA73 /* PhotoBomber */ = {
 			isa = PBXGroup;
 			children = (
+				FC6EEA8D15B34F980009D933 /* Images */,
 				FC0CBBDB15B2775A009BDA73 /* SBJson Classes */,
 				FC0CBB6C15B206AD009BDA73 /* PBAppDelegate.h */,
 				FC0CBB6D15B206AD009BDA73 /* PBAppDelegate.m */,
@@ -1062,6 +1065,14 @@
 			);
 			name = "SBJson Classes";
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		FC6EEA8D15B34F980009D933 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FC6EEA8E15B34FA30009D933 /* photobomb.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1321,6 +1332,7 @@
 				FC0CBBCF15B23C5F009BDA73 /* Sincerely.framework in Resources */,
 				802462E715B25FD400AAB103 /* README-GHUnit in Resources */,
 				80295ED015B341E500592E69 /* Background1.jpg in Resources */,
+				FC6EEA8F15B34FA30009D933 /* photobomb.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

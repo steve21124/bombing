@@ -194,6 +194,11 @@
 		FC0CBB9E15B21A5F009BDA73 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBB9D15B21A5F009BDA73 /* QuartzCore.framework */; };
 		FC0CBBA015B21A6B009BDA73 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBB9F15B21A6B009BDA73 /* CoreFoundation.framework */; };
 		FC0CBBA215B21AD3009BDA73 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBBA115B21AD3009BDA73 /* MobileCoreServices.framework */; };
+		FC0CBBC915B23BB9009BDA73 /* Sincerely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBBC815B23BB9009BDA73 /* Sincerely.framework */; };
+		FC0CBBCA15B23BB9009BDA73 /* Sincerely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBBC815B23BB9009BDA73 /* Sincerely.framework */; };
+		FC0CBBCD15B23C44009BDA73 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBBCB15B23C44009BDA73 /* AddressBook.framework */; };
+		FC0CBBCE15B23C44009BDA73 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0CBBCC15B23C44009BDA73 /* AddressBookUI.framework */; };
+		FC0CBBCF15B23C5F009BDA73 /* Sincerely.framework in Resources */ = {isa = PBXBuildFile; fileRef = FC0CBBC815B23BB9009BDA73 /* Sincerely.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -424,6 +429,9 @@
 		FC0CBB9D15B21A5F009BDA73 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FC0CBB9F15B21A6B009BDA73 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		FC0CBBA115B21AD3009BDA73 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FC0CBBC815B23BB9009BDA73 /* Sincerely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sincerely.framework; sourceTree = "<group>"; };
+		FC0CBBCB15B23C44009BDA73 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		FC0CBBCC15B23C44009BDA73 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,6 +439,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC0CBBCD15B23C44009BDA73 /* AddressBook.framework in Frameworks */,
+				FC0CBBCE15B23C44009BDA73 /* AddressBookUI.framework in Frameworks */,
 				8024602915B22B6100AAB103 /* CoreData.framework in Frameworks */,
 				8024602715B22B5C00AAB103 /* libsqlite3.0.dylib in Frameworks */,
 				8024602515B22B5500AAB103 /* libz.1.2.5.dylib in Frameworks */,
@@ -450,6 +460,7 @@
 				FC0CBB6215B206AD009BDA73 /* CoreGraphics.framework in Frameworks */,
 				FC0CBB9715B2116D009BDA73 /* FPPicker.framework in Frameworks */,
 				8024601E15B22B0900AAB103 /* libAviarySDK.a in Frameworks */,
+				FC0CBBC915B23BB9009BDA73 /* Sincerely.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +472,7 @@
 				FC0CBB8015B206AD009BDA73 /* UIKit.framework in Frameworks */,
 				FC0CBB8115B206AD009BDA73 /* Foundation.framework in Frameworks */,
 				FC0CBB9815B2116D009BDA73 /* FPPicker.framework in Frameworks */,
+				FC0CBBCA15B23BB9009BDA73 /* Sincerely.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,6 +688,8 @@
 		FC0CBB4E15B206AD009BDA73 = {
 			isa = PBXGroup;
 			children = (
+				FC0CBBCB15B23C44009BDA73 /* AddressBook.framework */,
+				FC0CBBCC15B23C44009BDA73 /* AddressBookUI.framework */,
 				8024602815B22B6100AAB103 /* CoreData.framework */,
 				8024602615B22B5C00AAB103 /* libsqlite3.0.dylib */,
 				8024602415B22B5500AAB103 /* libz.1.2.5.dylib */,
@@ -709,6 +723,7 @@
 		FC0CBB5C15B206AD009BDA73 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC0CBBC815B23BB9009BDA73 /* Sincerely.framework */,
 				8011AFAC15B22179000C9D81 /* GPUImage.xcodeproj */,
 				FC0CBB9515B2116D009BDA73 /* FPPicker.framework */,
 				FC0CBB9615B2116D009BDA73 /* FPPicker.bundle */,
@@ -1020,6 +1035,7 @@
 				8011B0F415B221FF000C9D81 /* Zombie.png in Resources */,
 				8011B0F715B22345000C9D81 /* phil1.jpg in Resources */,
 				8024601F15B22B0900AAB103 /* AviarySDKResources.bundle in Resources */,
+				FC0CBBCF15B23C5F009BDA73 /* Sincerely.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,8 @@
 //
 
 #import <FPPicker/FPPicker.h>
+#import <Sincerely/Sincerely.h>
+
 #import "PBViewController.h"
 #import "AFPhotoEditorController.h"
 
@@ -71,7 +73,7 @@
 }
 
 
-#pragma mark - FilePicker IBActions
+#pragma mark - IBActions
 - (IBAction)pickerAction: (id) sender {
     
     
@@ -187,6 +189,24 @@
     self.image.image = nil;
 }
 
+- (IBAction)publish:(id)sender {
+    if (!self.image.image) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Publishing Error" message:@"Please create an image first" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil]; 
+        [alertView show];
+        return;
+    }
+    
+    SYSincerelyController *controller = [[SYSincerelyController alloc] initWithImages:[NSArray arrayWithObject:self.image.image]
+                                                                              product:SYProductTypePostcard
+                                                                       applicationKey:@"5CR3PSEXU4WK7IHYHF54CI7B3ECQPNQW2SIJ8PEI"
+                                                                             delegate:self];
+    
+    if (controller) {
+        [self presentModalViewController:controller animated:YES];
+//        [controller release];
+    }
+}
+
 
 #pragma mark - FPPickerControllerDelegate Methods
 
@@ -227,6 +247,30 @@
     [popoverController dismissPopoverAnimated:YES];
 }
 
+#pragma mark - SYSincerelyControllerDelegate methods
+- (void)sincerelyControllerDidFinish:(SYSincerelyController *)controller {
+    /*
+     * Here I know that the user made a purchase and I can do something with it
+     */
+    
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)sincerelyControllerDidCancel:(SYSincerelyController *)controller {
+    /*
+     * Here I know that the user hit the cancel button and they want to leave the Sincerely controller
+     */
+    
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)sincerelyControllerDidFailInitiationWithError:(NSError *)error {
+    /*
+     * Here I know that incorrect inputs were given to initWithImages:product:applicationKey:delegate;
+     */
+    
+    NSLog(@"Error: %@", error);
+}    
 
 #pragma mark - Aviary Methods
 - (void)photoEditor:(AFPhotoEditorController *)editor finishedWithImage:(UIImage *)image

@@ -7,10 +7,11 @@
 //
 
 #import <FPPicker/FPPicker.h>
+#import <Sincerely/Sincerely.h>
 #import <UIKit/UIKit.h>
 #import "GPUImage.h"
 
-@interface PBViewController : UIViewController<FPPickerDelegate, UIPopoverControllerDelegate, FPSaveDelegate> {
+@interface PBViewController : UIViewController<FPPickerDelegate, UIPopoverControllerDelegate, FPSaveDelegate, SYSincerelyControllerDelegate> {
     IBOutlet UIButton *button;
     IBOutlet UIButton *savebutton;
     

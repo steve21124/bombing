@@ -408,7 +408,7 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
-#pragma mark Uploading file
+#pragma mark - Uploading file
 
 -(BOOL)uploadFile:(NSData *)data
 {
@@ -418,7 +418,6 @@
     NSURLResponse *response;
     NSError *err;
     NSData *responseData;
-    NSString *newStr;
     NSString *imageId;
     
     NSString *apiUrl = @"http://flashfotoapi.com/api/";
@@ -466,7 +465,6 @@
     if ([jsonString length] <= 2) {
         return NO;
     }
-    // parse json response
     
     // remove the background
     url = [NSURL URLWithString:[NSString stringWithFormat:@"%@segment/%@?partner_username=%@&partner_apikey=%@", apiUrl, imageId, username, apiKey]];
@@ -485,11 +483,8 @@
     jsonObjects = [jsonParser objectWithString:jsonString error:&error];
     NSLog(@"jsonObjects: %@", jsonObjects);
     NSString *segmentationStatus = [jsonObjects objectForKey:@"segmentation_status"];
-    BOOL segmentationFinished = NO;
-    if ([segmentationStatus isEqualToString:@"finished"]) {
-        segmentationFinished = YES;
-    }
-    while (!segmentationFinished) {
+
+    while (![segmentationStatus isEqualToString:@"finished"]) {
         // check segment status
         url = [NSURL URLWithString:[NSString stringWithFormat:@"%@segment_status/%@?partner_username=%@&partner_apikey=%@", apiUrl, imageId, username, apiKey]];
         request = [NSMutableURLRequest requestWithURL:url];
@@ -499,12 +494,16 @@
         
         responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
         NSLog(@"responseData: %@", responseData);
-        newStr = [[NSString alloc] initWithData:responseData
+        jsonString = [[NSString alloc] initWithData:responseData
                                        encoding:NSUTF8StringEncoding];    
         NSLog(@"jsonString: %@", jsonString);
+        
+        jsonObjects = [jsonParser objectWithString:jsonString error:&error];
+        NSLog(@"jsonObjects: %@", jsonObjects);
+        segmentationStatus = [jsonObjects objectForKey:@"segmentation_status"];
     }
     
-    if (!segmentationFinished) {
+    if (![segmentationStatus isEqualToString:@"finished"]) {
         return NO;
     }
     
@@ -517,7 +516,7 @@
     
     responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     NSLog(@"responseData: %@", responseData);
-    newStr = [[NSString alloc] initWithData:responseData
+    jsonString = [[NSString alloc] initWithData:responseData
                                    encoding:NSUTF8StringEncoding];    
     NSLog(@"jsonString: %@", jsonString);
     
@@ -525,7 +524,7 @@
     
 }
 
-#pragma mark UIGestureRegognizerDelegate
+#pragma mark UIGestureRecognizerDelegate
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     return ![gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]] && ![gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]];
     

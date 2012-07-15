@@ -337,11 +337,13 @@
 {
     NSLog(@"FILE CHOSEN: %@", info);
     
-//    image.image = [info objectForKey:@"FPPickerControllerOriginalImage"];
+    UIImage *pickedImage = [info objectForKey:@"FPPickerControllerOriginalImage"];
     if (!self.image1.image) {
-        self.image1.image = [info objectForKey:@"FPPickerControllerOriginalImage"];
+        self.image1.frame = CGRectMake(self.image1.frame.origin.x, self.image1.frame.origin.y, pickedImage.size.width, pickedImage.size.height);
+        self.image1.image = pickedImage;
     } else {
-        self.image2.image = [info objectForKey:@"FPPickerControllerOriginalImage"];
+        self.image2.frame = CGRectMake(self.image1.frame.origin.x, self.image1.frame.origin.y, pickedImage.size.width, pickedImage.size.height);
+        self.image2.image = pickedImage;
         [self configureStep2];
     }
     

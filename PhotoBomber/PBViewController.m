@@ -130,6 +130,8 @@
     self.publishButton.hidden = YES;
     self.postcardButton.hidden = YES;
     self.resetButton.hidden = YES;
+    
+    [self uploadFile:UIImagePNGRepresentation(self.image2.image)];
 }
 
 - (void)configureStep3 {
@@ -145,7 +147,7 @@
     UIImage *originalImage = self.image1.image;
     UIImage *noiseLayer = self.image2.image;
     
-    if ([self uploadFile:UIImagePNGRepresentation(noiseLayer)]) {
+//    if ([self uploadFile:UIImagePNGRepresentation(noiseLayer)]) {
     
         GPUImageOverlayBlendFilter *overlayBlendFilter = [[GPUImageOverlayBlendFilter alloc] init];
         GPUImagePicture *pic1 = [[GPUImagePicture alloc] initWithImage:originalImage];
@@ -166,15 +168,16 @@
         
         //self.image.image = blendedImage;
         
-    } else {
-        UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle: @"Error"
-                              message: @"Error mashing images"
-                              delegate: nil
-                              cancelButtonTitle:@"OK"
-                              otherButtonTitles:nil];
-        [alert show];
-    }
+//    } else {
+//        UIAlertView *alert = [[UIAlertView alloc]
+//                              initWithTitle: @"Error"
+//                              message: @"Error mashing images"
+//                              delegate: nil
+//                              cancelButtonTitle:@"OK"
+//                              otherButtonTitles:nil];
+//        [alert show];
+//    }po url
+    
 }
 
 //Merge uiview
@@ -508,10 +511,10 @@
     }
     
     // get resulting PNG with transparency image
-    url = [NSURL URLWithString:[NSString stringWithFormat:@"%@get/%@?version=HardMasked&partner_username=%@&partner_apikey=%@", apiUrl, imageId, username, apiKey]];
+    NSString *urlString = [NSString stringWithFormat:@"%@get/%@?version=HardMasked&partner_username=%@&partner_apikey=%@", apiUrl, imageId, username, apiKey];
     request = [NSMutableURLRequest requestWithURL:url];
     
-    [request setHTTPMethod:@"POST"];
+    [request setHTTPMethod:@"GET"];
     [request setHTTPBody:data];
     
     responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
@@ -519,7 +522,8 @@
     jsonString = [[NSString alloc] initWithData:responseData
                                    encoding:NSUTF8StringEncoding];    
     NSLog(@"jsonString: %@", jsonString);
-    
+    UIImage *maskedImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]]];
+    self.image2.image = maskedImage;
     return YES;
     
 }

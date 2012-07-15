@@ -60,8 +60,8 @@
     // Release any retained subviews of the main view.
     
     
-    image1.userInteractionEnabled = YES;
-    image1.multipleTouchEnabled = YES;
+    image2.userInteractionEnabled = YES;
+    image2.multipleTouchEnabled = YES;
     canvas.userInteractionEnabled = YES;
     canvas.multipleTouchEnabled = YES;
     
@@ -74,8 +74,8 @@
         _marque.lineWidth = 1.0f;
         _marque.lineJoin = kCALineJoinRound;
         _marque.lineDashPattern = [NSArray arrayWithObjects:[NSNumber numberWithInt:10],[NSNumber numberWithInt:5], nil];
-        _marque.bounds = CGRectMake(image1.frame.origin.x, image1.frame.origin.y, 0, 0);
-        _marque.position = CGPointMake(image1.frame.origin.x + canvas.frame.origin.x, image1.frame.origin.y + canvas.frame.origin.y);
+        _marque.bounds = CGRectMake(image2.frame.origin.x, image2.frame.origin.y, 0, 0);
+        _marque.position = CGPointMake(image2.frame.origin.x + canvas.frame.origin.x, image2.frame.origin.y + canvas.frame.origin.y);
     }
     [[self.view layer] addSublayer:_marque];
     
@@ -442,13 +442,13 @@
     
     CGFloat scale = 1.0 - (_lastScale - [(UIPinchGestureRecognizer*)sender scale]);
     
-    CGAffineTransform currentTransform = image1.transform;
+    CGAffineTransform currentTransform = image2.transform;
     CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
     
-    [image1 setTransform:newTransform];
+    [image2 setTransform:newTransform];
     
     _lastScale = [(UIPinchGestureRecognizer*)sender scale];
-    [self showOverlayWithFrame:image1.frame];
+    [self showOverlayWithFrame:image2.frame];
 }
 
 -(IBAction)rotate:(UIGestureRecognizer *)sender {
@@ -461,13 +461,13 @@
     
     CGFloat rotation = 0.0 - (_lastRotation - [(UIRotationGestureRecognizer*)sender rotation]);
     
-    CGAffineTransform currentTransform = image1.transform;
+    CGAffineTransform currentTransform = image2.transform;
     CGAffineTransform newTransform = CGAffineTransformRotate(currentTransform,rotation);
     
-    [image1 setTransform:newTransform];
+    [image2 setTransform:newTransform];
     
     _lastRotation = [(UIRotationGestureRecognizer*)sender rotation];
-    [self showOverlayWithFrame:image1.frame];
+    [self showOverlayWithFrame:image2.frame];
 }
 
 
@@ -476,14 +476,14 @@
     CGPoint translatedPoint = [(UIPanGestureRecognizer*)sender translationInView:canvas];
     
     if([(UIPanGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
-        _firstX = [image1 center].x;
-        _firstY = [image1 center].y;
+        _firstX = [image2 center].x;
+        _firstY = [image2 center].y;
     }
     
     translatedPoint = CGPointMake(_firstX+translatedPoint.x, _firstY+translatedPoint.y);
     
-    [image1 setCenter:translatedPoint];
-    [self showOverlayWithFrame:image1.frame];
+    [image2 setCenter:translatedPoint];
+    [self showOverlayWithFrame:image2.frame];
 }
 
 -(IBAction)tapped:(UIGestureRecognizer *)sender{

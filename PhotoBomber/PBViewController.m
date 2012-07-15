@@ -137,7 +137,7 @@
     [self presentModalViewController:fpController animated:YES];
 }
 
-- (IBAction)savingAction: (id) sender {
+- (IBAction)savingAction: (id)sender {
     
     if (image.image == nil){
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Nothing to Save"
@@ -176,11 +176,11 @@
     /*
      * Display it.
      */
-    UIPopoverController *popoverControllerA = [UIPopoverController alloc];    
-    self.popoverController = [popoverControllerA initWithContentViewController:fpSave];
-    popoverController.popoverContentSize = CGSizeMake(320, 520);
-    [popoverController presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
-    
+//    UIPopoverController *popoverControllerA = [UIPopoverController alloc];    
+//    self.popoverController = [popoverControllerA initWithContentViewController:fpSave];
+//    popoverController.popoverContentSize = CGSizeMake(320, 520);
+//    [popoverController presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    [self presentModalViewController:fpSave animated:YES];
 }
 
 - (IBAction)reset:(id)sender {
@@ -238,13 +238,14 @@
 - (void)FPSaveController:(FPSaveController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     NSLog(@"FILE SAVED: %@", info);
     
-    [popoverController dismissPopoverAnimated:YES];
-    
+//    [popoverController dismissPopoverAnimated:YES];
+    [self dismissModalViewControllerAnimated:YES];
 }
 - (void)FPSaveControllerDidCancel:(FPSaveController *)picker {
     NSLog(@"FP Cancelled Save");
     
-    [popoverController dismissPopoverAnimated:YES];
+//    [popoverController dismissPopoverAnimated:YES];
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark - SYSincerelyControllerDelegate methods

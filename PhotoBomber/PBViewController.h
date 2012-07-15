@@ -11,7 +11,7 @@
 #import <UIKit/UIKit.h>
 #import "GPUImage.h"
 
-@interface PBViewController : UIViewController<FPPickerDelegate, UIPopoverControllerDelegate, FPSaveDelegate, SYSincerelyControllerDelegate> {
+@interface PBViewController : UIViewController<FPPickerDelegate, UIPopoverControllerDelegate, FPSaveDelegate, SYSincerelyControllerDelegate,UIGestureRecognizerDelegate> {
     IBOutlet UIButton *button;
     IBOutlet UIButton *savebutton;
     
@@ -20,11 +20,25 @@
     
     IBOutlet UIImageView *image;
     UIPopoverController *popoverController;
+    
+    UIView *canvas;
+    CAShapeLayer *_marque;
+    CGFloat _lastScale;
+    CGFloat _lastRotation;
+	CGFloat _firstX;
+	CGFloat _firstY; 
 }
 
 @property (nonatomic, retain) UIImageView *image1;
 @property (nonatomic, retain) UIImageView *image2;
 @property (nonatomic, retain) UIImageView *image;
 @property (nonatomic, retain) UIPopoverController *popoverController;
+
+@property (nonatomic, retain) IBOutlet UIView *canvas;
+
+-(IBAction)scale:(UIGestureRecognizer *)sender;
+-(IBAction)rotate:(UIGestureRecognizer *)sender;
+-(IBAction)move:(UIGestureRecognizer *)sender;
+-(IBAction)tapped:(UIGestureRecognizer *)sender;
 
 @end

@@ -37,6 +37,8 @@
 @synthesize image1;
 @synthesize image2;
 
+@synthesize canvas;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -56,6 +58,45 @@
     [self setResetButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+    
+    
+    image1.userInteractionEnabled = YES;
+    image1.multipleTouchEnabled = YES;
+    canvas.userInteractionEnabled = YES;
+    canvas.multipleTouchEnabled = YES;
+    
+    
+    // Rotate and choose image
+    if (!_marque) {
+        _marque = [CAShapeLayer layer];
+        _marque.fillColor = [[UIColor clearColor] CGColor];
+        _marque.strokeColor = [[UIColor grayColor] CGColor];
+        _marque.lineWidth = 1.0f;
+        _marque.lineJoin = kCALineJoinRound;
+        _marque.lineDashPattern = [NSArray arrayWithObjects:[NSNumber numberWithInt:10],[NSNumber numberWithInt:5], nil];
+        _marque.bounds = CGRectMake(image1.frame.origin.x, image1.frame.origin.y, 0, 0);
+        _marque.position = CGPointMake(image1.frame.origin.x + canvas.frame.origin.x, image1.frame.origin.y + canvas.frame.origin.y);
+    }
+    [[self.view layer] addSublayer:_marque];
+    
+    UIPinchGestureRecognizer *pinchRecognizer = [[[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scale:)] init];
+    [pinchRecognizer setDelegate:self];
+    [self.view addGestureRecognizer:pinchRecognizer];
+    
+    UIRotationGestureRecognizer *rotationRecognizer = [[[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(rotate:)] init];
+    [rotationRecognizer setDelegate:self];
+    [self.view addGestureRecognizer:rotationRecognizer];
+    
+    UIPanGestureRecognizer *panRecognizer = [[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(move:)] init];
+    [panRecognizer setMinimumNumberOfTouches:1];
+    [panRecognizer setMaximumNumberOfTouches:1];
+    [panRecognizer setDelegate:self];
+    [canvas addGestureRecognizer:panRecognizer];
+    
+    UITapGestureRecognizer *tapProfileImageRecognizer = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)] init];
+    [tapProfileImageRecognizer setNumberOfTapsRequired:1];
+    [tapProfileImageRecognizer setDelegate:self];
+    [canvas addGestureRecognizer:tapProfileImageRecognizer];       
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -355,5 +396,99 @@
                                               encoding:NSUTF8StringEncoding];    
     NSLog(@"newStr: %@", newStr);
 }
+
+#pragma mark UIGestureRegognizerDelegate
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return ![gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]] && ![gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]];
+    
+}
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    if ([touch.view isKindOfClass:[UIButton class]]) {      //change it to your condition
+        return NO;
+    }
+    return YES;
+    
+}
+
+-(void)showOverlayWithFrame:(CGRect)frame {
+    
+    if (![_marque actionForKey:@"linePhase"]) {
+        CABasicAnimation *dashAnimation;
+        dashAnimation = [CABasicAnimation animationWithKeyPath:@"lineDashPhase"];
+        [dashAnimation setFromValue:[NSNumber numberWithFloat:0.0f]];
+        [dashAnimation setToValue:[NSNumber numberWithFloat:15.0f]];
+        [dashAnimation setDuration:0.5f];
+        [dashAnimation setRepeatCount:HUGE_VALF];
+        [_marque addAnimation:dashAnimation forKey:@"linePhase"];
+    }
+    
+    _marque.bounds = CGRectMake(frame.origin.x, frame.origin.y, 0, 0);
+    _marque.position = CGPointMake(frame.origin.x + canvas.frame.origin.x, frame.origin.y + canvas.frame.origin.y);
+    
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGPathAddRect(path, NULL, frame);
+    [_marque setPath:path];
+    CGPathRelease(path);
+    
+    _marque.hidden = NO;
+    
+}
+
+-(IBAction)scale:(UIGestureRecognizer *)sender {
+    
+    if([(UIPinchGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
+        _lastScale = 1.0;
+    }
+    
+    CGFloat scale = 1.0 - (_lastScale - [(UIPinchGestureRecognizer*)sender scale]);
+    
+    CGAffineTransform currentTransform = image1.transform;
+    CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
+    
+    [image1 setTransform:newTransform];
+    
+    _lastScale = [(UIPinchGestureRecognizer*)sender scale];
+    [self showOverlayWithFrame:image1.frame];
+}
+
+-(IBAction)rotate:(UIGestureRecognizer *)sender {
+    
+    if([(UIRotationGestureRecognizer*)sender state] == UIGestureRecognizerStateEnded) {
+        
+        _lastRotation = 0.0;
+        return;
+    }
+    
+    CGFloat rotation = 0.0 - (_lastRotation - [(UIRotationGestureRecognizer*)sender rotation]);
+    
+    CGAffineTransform currentTransform = image1.transform;
+    CGAffineTransform newTransform = CGAffineTransformRotate(currentTransform,rotation);
+    
+    [image1 setTransform:newTransform];
+    
+    _lastRotation = [(UIRotationGestureRecognizer*)sender rotation];
+    [self showOverlayWithFrame:image1.frame];
+}
+
+
+-(IBAction)move:(UIGestureRecognizer *)sender {
+    
+    CGPoint translatedPoint = [(UIPanGestureRecognizer*)sender translationInView:canvas];
+    
+    if([(UIPanGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
+        _firstX = [image1 center].x;
+        _firstY = [image1 center].y;
+    }
+    
+    translatedPoint = CGPointMake(_firstX+translatedPoint.x, _firstY+translatedPoint.y);
+    
+    [image1 setCenter:translatedPoint];
+    [self showOverlayWithFrame:image1.frame];
+}
+
+-(IBAction)tapped:(UIGestureRecognizer *)sender{
+    _marque.hidden = YES;
+}
+
 
 @end

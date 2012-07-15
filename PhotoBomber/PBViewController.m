@@ -13,6 +13,7 @@
 #import "AFPhotoEditorController.h"
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
+#import "SBJsonParser.h"
 
 @interface PBViewController ()
 
@@ -102,6 +103,8 @@
 - (IBAction)setupOverlay:(id)sender {
     UIImage *originalImage = self.image1.image;
     UIImage *noiseLayer = self.image2.image;
+    
+    [self uploadFile:UIImagePNGRepresentation(noiseLayer)];
     
     GPUImageOverlayBlendFilter *overlayBlendFilter = [[GPUImageOverlayBlendFilter alloc] init];
     GPUImagePicture *pic1 = [[GPUImagePicture alloc] initWithImage:originalImage];
@@ -336,30 +339,21 @@
 
 #pragma mark Uploading file
 
--(void)uploadFile:(NSString *)filename
+-(void)uploadFile:(NSData *)data
 {
-    // upload file
-    // put upload file code here
-    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:@"http://flashfotoapi.com/api/add/?privacy=public&partner_username=philster&partner_apikey=LUPbRi4fzoWpCjh3ieFVcHZbMCmlrWbs" ]];
-    [request setDownloadProgressDelegate:self];
-    [request setPostValue:@"upload" forKey:@"action"];  
-    [request addData:[NSData dataWithData:UIImageJPEGRepresentation([UIImage imageNamed:filename],0.9)] withFileName:@"img.jpg" andContentType:@"image/jpeg" forKey:@"img"];
+    NSURL *url = [NSURL URLWithString:@"http://flashfotoapi.com/api/add/?privacy=public&partner_username=philster&partner_apikey=LUPbRi4fzoWpCjh3ieFVcHZbMCmlrWbs"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
-    [request setUploadProgressDelegate:self];
-    [request setCompletionBlock:^{
-        // Use when fetching text data
-        //NSString *responseString = [request responseString];
-        
-        // Use when fetching binary data
-        NSData *responseData = [request responseData];
-    }];
-    [request setFailedBlock:^{
-        NSError *error = [request error];
-    }];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:data];
     
-    [request startAsynchronous];
+    NSURLResponse *response;
+    NSError *err;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    NSLog(@"responseData: %@", responseData);
+    NSString* newStr = [[NSString alloc] initWithData:responseData
+                                              encoding:NSUTF8StringEncoding];    
+    NSLog(@"newStr: %@", newStr);
 }
-
-
 
 @end

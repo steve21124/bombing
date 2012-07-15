@@ -524,6 +524,7 @@
     NSLog(@"jsonString: %@", jsonString);
     UIImage *maskedImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]]];
     self.image2.image = maskedImage;
+
     return YES;
     
 }

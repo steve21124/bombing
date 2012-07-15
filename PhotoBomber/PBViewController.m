@@ -12,6 +12,7 @@
 #import "PBViewController.h"
 #import "AFPhotoEditorController.h"
 #import "ASIHTTPRequest.h"
+#import "ASIFormDataRequest.h"
 
 @interface PBViewController ()
 
@@ -335,17 +336,28 @@
 
 #pragma mark Uploading file
 
--(void)uploadFile{
-    /*  upload file
+-(void)uploadFile:(NSString *)filename
+{
+    // upload file
     // put upload file code here
-     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:@"http:xxxxx" ]];
-     [request setDownloadProgressDelegate:progresse];
-     [request setPostValue:@"upload" forKey:@"action"];  
-     [request addData:[NSData dataWithData:UIImageJPEGRepresentation([UIImage imageNamed:@"xxxxx.jpg"],0.9)] withFileName:@"img.jpg" andContentType:@"image/jpeg" forKey:@"img"];
-     
-     [request startAsynchronous];
-
- */
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:@"http://flashfotoapi.com/api/add/?privacy=public&partner_username=philster&partner_apikey=LUPbRi4fzoWpCjh3ieFVcHZbMCmlrWbs" ]];
+    [request setDownloadProgressDelegate:self];
+    [request setPostValue:@"upload" forKey:@"action"];  
+    [request addData:[NSData dataWithData:UIImageJPEGRepresentation([UIImage imageNamed:filename],0.9)] withFileName:@"img.jpg" andContentType:@"image/jpeg" forKey:@"img"];
+    
+    [request setUploadProgressDelegate:self];
+    [request setCompletionBlock:^{
+        // Use when fetching text data
+        //NSString *responseString = [request responseString];
+        
+        // Use when fetching binary data
+        NSData *responseData = [request responseData];
+    }];
+    [request setFailedBlock:^{
+        NSError *error = [request error];
+    }];
+    
+    [request startAsynchronous];
 }
 
 

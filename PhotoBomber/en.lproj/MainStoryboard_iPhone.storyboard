@@ -28,7 +28,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VGO-hP-zYu">
-                                <rect key="frame" x="20" y="360" width="120" height="37"/>
+                                <rect key="frame" x="100" y="405" width="120" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Choose Image">
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OTd-QS-rNL">
-                                <rect key="frame" x="20" y="403" width="120" height="37"/>
+                                <rect key="frame" x="100" y="405" width="120" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Mash images">
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sxP-HO-MKq">
-                                <rect key="frame" x="180" y="405" width="120" height="37"/>
+                                <rect key="frame" x="222" y="405" width="80" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Reset">
@@ -73,7 +73,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3Im-9v-vCs">
-                                <rect key="frame" x="180" y="360" width="120" height="37"/>
+                                <rect key="frame" x="119" y="405" width="80" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Postcard">
@@ -88,7 +88,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g9B-0S-EHs">
-                                <rect key="frame" x="180" y="315" width="120" height="37"/>
+                                <rect key="frame" x="20" y="405" width="80" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Publish">
@@ -106,9 +106,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="chooseImageButton" destination="VGO-hP-zYu" id="Acu-u2-vHG"/>
                         <outlet property="image" destination="9Ea-Kf-Bfz" id="C5b-eb-BeD"/>
                         <outlet property="image1" destination="vzz-me-GnV" id="npZ-SN-8f9"/>
                         <outlet property="image2" destination="WhA-uW-8Jo" id="Nw6-aJ-tlO"/>
+                        <outlet property="mashImagesButton" destination="OTd-QS-rNL" id="ZNp-C1-2bM"/>
+                        <outlet property="postcardButton" destination="3Im-9v-vCs" id="qYp-B8-67U"/>
+                        <outlet property="publishButton" destination="g9B-0S-EHs" id="CgN-nt-2N4"/>
+                        <outlet property="resetButton" destination="sxP-HO-MKq" id="C1o-qK-Pm9"/>
                     </connections>
                 </viewController>
             </objects>
@@ -120,9 +125,14 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PBViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="chooseImageButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="image1" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="image2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mashImagesButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="postcardButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="publishButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="savebutton" candidateClass="UIButton"/>
             </relationships>
         </class>

@@ -15,9 +15,21 @@
 
 @interface PBViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *chooseImageButton;
+@property (weak, nonatomic) IBOutlet UIButton *mashImagesButton;
+@property (weak, nonatomic) IBOutlet UIButton *publishButton;
+@property (weak, nonatomic) IBOutlet UIButton *postcardButton;
+@property (weak, nonatomic) IBOutlet UIButton *resetButton;
+
 @end
 
 @implementation PBViewController
+
+@synthesize chooseImageButton;
+@synthesize mashImagesButton;
+@synthesize publishButton;
+@synthesize postcardButton;
+@synthesize resetButton;
 @synthesize popoverController;
 @synthesize image;
 @synthesize image1;
@@ -30,10 +42,16 @@
     
     //Test Overlay
 //    [self setupOverlay];
+    [self configureStep1];
 }
 
 - (void)viewDidUnload
 {
+    [self setChooseImageButton:nil];
+    [self setMashImagesButton:nil];
+    [self setPublishButton:nil];
+    [self setPostcardButton:nil];
+    [self setResetButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -47,6 +65,7 @@
     }
 }
 
+#pragma mark - Misc methods
 - (void)displayEditorForImage:(UIImage *)imageToEdit
 {
     AFPhotoEditorController *editorController = [[AFPhotoEditorController alloc] initWithImage:imageToEdit];
@@ -54,6 +73,31 @@
     [self presentModalViewController:editorController animated:YES];
 }
 
+- (void)configureStep1 {
+    self.chooseImageButton.hidden = NO;
+    self.mashImagesButton.hidden = YES;
+    self.publishButton.hidden = YES;
+    self.postcardButton.hidden = YES;
+    self.resetButton.hidden = YES;
+}
+
+- (void)configureStep2 {
+    self.chooseImageButton.hidden = YES;
+    self.mashImagesButton.hidden = NO;
+    self.publishButton.hidden = YES;
+    self.postcardButton.hidden = YES;
+    self.resetButton.hidden = YES;
+}
+
+- (void)configureStep3 {
+    self.chooseImageButton.hidden = YES;
+    self.mashImagesButton.hidden = YES;
+    self.publishButton.hidden = NO;
+    self.postcardButton.hidden = NO;
+    self.resetButton.hidden = NO;
+}
+
+#pragma mark - IBActions
 - (IBAction)setupOverlay:(id)sender {
     UIImage *originalImage = self.image1.image;
     UIImage *noiseLayer = self.image2.image;
@@ -73,8 +117,6 @@
 //    self.image.image = blendedImage;    
 }
 
-
-#pragma mark - IBActions
 - (IBAction)pickerAction: (id) sender {
     
     
@@ -188,6 +230,8 @@
     self.image1.image = nil;
     self.image2.image = nil;
     self.image.image = nil;
+
+    [self configureStep1];
 }
 
 - (IBAction)publish:(id)sender {
@@ -220,6 +264,7 @@
         self.image1.image = [info objectForKey:@"FPPickerControllerOriginalImage"];
     } else {
         self.image2.image = [info objectForKey:@"FPPickerControllerOriginalImage"];
+        [self configureStep2];
     }
     
     [popoverController dismissPopoverAnimated:YES];
@@ -280,6 +325,7 @@
    // [[self imageView] setImage:image];
     self.image.image = image;
     [self dismissModalViewControllerAnimated:YES];
+    [self configureStep3];
 }
 
 - (void)photoEditorCanceled:(AFPhotoEditorController *)editor

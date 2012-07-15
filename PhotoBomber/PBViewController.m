@@ -520,6 +520,10 @@
                                    encoding:NSUTF8StringEncoding];    
     NSLog(@"jsonString: %@", jsonString);
     
+    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[url absoluteString]]];
+    [image2 setImage:[[UIImage alloc] initWithData:imageData]];
+
+    
     return YES;
     
 }
